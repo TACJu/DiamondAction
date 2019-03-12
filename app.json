@@ -1,7 +1,9 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/commercial/commercial",
+    "pages/myself/myself"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -21,13 +23,13 @@
         "selectedIconPath": "/images/1.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/commercial/commercial",
         "text": "淘 钻",
         "iconPath": "/images/1.png",
         "selectedIconPath": "/images/1.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/myself/myself",
         "text": "我 的",
         "iconPath": "/images/1.png",
         "selectedIconPath": "/images/1.png"

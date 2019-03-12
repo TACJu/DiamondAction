@@ -10,7 +10,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    timeString: '早上'
+    timeString: '你'
   },
   //事件处理函数
   bindViewTap: function() {
@@ -45,7 +45,37 @@ Page({
         }
       })
     }
-    time = 
+    let time = new Date().getHours();
+    if (time >= 5 && time < 9) {
+      this.setData({
+        timeString : "早上"
+      })
+    }
+    else if (time >= 9 && time < 11) {
+      this.setData({
+        timeString: "上午"
+      })
+    }
+    else if (time >= 11 && time < 13) {
+      this.setData({
+        timeString: "中午"
+      })
+    }
+    else if (time >= 13 && time < 18) {
+      this.setData({
+        timeString: "下午"
+      })
+    }
+    if (time >= 18 && time < 24) {
+      this.setData({
+        timeString: "晚上"
+      })
+    }
+    else {
+      this.setData({
+        timeString: "你"
+      })
+    }
   },
   getUserInfo: function(e) {
     console.log(e)

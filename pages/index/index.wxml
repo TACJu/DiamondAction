@@ -3,10 +3,10 @@
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取昵称 </button>
     <block wx:else>
-      <text class="userinfo-nickname">好，{{userInfo.nickName}}</text>
+      <text class="userinfo-nickname">{{timeString}}好，{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
+<!--  <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
-  </view>
+  </view> -->
 </view>
