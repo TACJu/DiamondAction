@@ -1,0 +1,59 @@
+.commercial-wrapper
+{
+  position: relative;
+  padding-bottom: 500rpx;
+}
+
+.commercial-bg
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.goods-list
+{
+  display: flex;
+  flex-direction: column
+}
+
+.goods-item
+{
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+}
+
+.goods-picture
+{
+  width: 375rpx;
+  height: 360rpx;
+}
+
+.goods-information
+{
+  margin-top: 120rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.goods-name
+{
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+
+.goods-price
+{
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+
+.goods-number
+{
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
