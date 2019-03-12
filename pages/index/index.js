@@ -2,12 +2,15 @@
 //获取应用实例
 const app = getApp()
 
+var util = require("../../utils/util.js");
+
 Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    timeString: '早上'
   },
   //事件处理函数
   bindViewTap: function() {
@@ -42,6 +45,7 @@ Page({
         }
       })
     }
+    time = 
   },
   getUserInfo: function(e) {
     console.log(e)

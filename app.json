@@ -8,5 +8,30 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "backgroundColor": "CAE1FF",
+    "color": "#bfbfbf",
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首 页",
+        "iconPath": "/images/1.png",
+        "selectedIconPath": "/images/1.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "淘 钻",
+        "iconPath": "/images/1.png",
+        "selectedIconPath": "/images/1.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我 的",
+        "iconPath": "/images/1.png",
+        "selectedIconPath": "/images/1.png"
+      }
+    ]
   }
 }
