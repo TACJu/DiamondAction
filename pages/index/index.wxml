@@ -1,83 +1,40 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取昵称 </button>
-    <block wx:else>
-      <text class="userinfo-nickname">{{timeString}}好，{{userInfo.nickName}}</text>
-    </block>
 
+  <view class="page-container">
 
-</view>
-  <!--<view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view> -->
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo"
+      bindgetuserinfo="getUserInfo"> 获取昵称 </button>
+      <block wx:else>
+        <text class="userinfo-nickname">{{timeString}}好，{{userInfo.nickName}}
+        </text>
+      </block>
+    </view>
 
-<view class="mypic">
-  <swiper
-    indicator-dots="{{indicatorDots}}"
-    autoplay="{{autoplay}}"
-    interval="{{interval}}"
-    duration="{{duration}}"
-    previous-margin='0dx'
-    next-margin='0dx'
+    <swiper
+      indicator-dots="{{true}}"
+      autoplay="{{true}}"
+      interval="{{5000}}"
+      duration="{{1000}}"
+      previous-margin='0dx'
+      next-margin='0dx'
+    > 
+      <block wx:for="{{swiperPics}}">
+        <swiper-item>
+          <view class="section__ctn">
+            <image
+              style="width: 200px; height: 200px; background-color: #eeeeee;"
+              mode="scaleToFill"
+              src='{{item}}'
+              width="555"
+              height="550"
+            ></image>
+          </view>      
+        </swiper-item>
+      </block>
+    </swiper>
 
-  >
-    
-    <block wx:for="{{array}}">
-    <view class="pictures">
-      <swiper-item>
-        
-        
-          <view class="section section_gap" wx:for="{{array}}"   wx:for-item="item">
-            <view class="section__title">{{item.text}}</view>
-            <view class="section__ctn">
-              <image
-                style="width: 200px; height: 200px; background-color: #eeeeee;"
-                mode="{{item.mode}}"
-                src='../../images/goods.jpg'
-                width="555"
-                height="550"
-              ></image>
-            </view> 
-          </view>       
-      </swiper-item>
-            <swiper-item>
-        
-          <view class="section section_gap" wx:for="{{array}}"   wx:for-item="item">
-            <view class="section__title">123{{item.text}}</view>
-            <view class="section__ctn">
-              <image
-                style="width: 200px; height: 200px; background-color: #eeeeee;"
-                mode="{{item.mode}}"
-                src='../../images/1.png'
-                width="555"
-                height="550"
-              ></image>
-            </view> 
-          </view>  
-             
-      </swiper-item>
-            <swiper-item>
-        
-          <view class="section section_gap" wx:for="{{array}}"   wx:for-item="item">
-            <view class="section__title">{{item.text}}</view>
-            <view class="section__ctn">
-              <image
-                style="width: 200px; height: 200px; background-color: #eeeeee;"
-                mode="{{item.mode}}"
-                src='../../images/store.jpg'
-                width="555"
-                height="550"
-              ></image>
-            </view> 
-          </view>       
-      </swiper-item>
-     </view>
-    </block>
-
-  </swiper>
-  </view>
-  <view class='recommend'>
     <text class='recommend-label'>为您推荐:\n</text>
     <swiper class='recommend-text'
     indicator-dots='{{false}}'
