@@ -16,6 +16,11 @@ page{
   width: 100%;
   text-align: center;
 }
+
+.section__ctn{
+  text-align: center;
+}
+
 .mypic{
 
   width: 100%;
