@@ -13,3 +13,35 @@
   height: 100%;
   z-index: -1;
 }
+
+.goods-name
+{
+  margin-top: 90rpx;
+  margin-left: 30rpx;
+  margin-bottom: 48rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+
+.goods-price
+{
+  margin-left: 30rpx;
+  margin-bottom: 48rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+
+.goods-number
+{
+  margin-left: 30rpx;
+  margin-bottom: 48rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+
+.goods-description
+{
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}

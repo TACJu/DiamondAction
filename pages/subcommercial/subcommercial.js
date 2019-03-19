@@ -14,13 +14,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(localData.goodsList[0])
-    console.log(this.data.merchandise)
     this.setData({
       id:options.id,
       merchandise:localData.goodsList[options.id]
     })
-    console.log(this.data.merchandise)
   },
 
   /**

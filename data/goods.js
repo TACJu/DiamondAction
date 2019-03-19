@@ -1,7 +1,7 @@
 var goodsJson = [
   {
     "id": 0,
-    "photopath": '/images/goods.jpg',
+    "photopath": '/images/Diamond/',
     "name": '道路千万条，安全第一条',
     "price": 1,
     "number": 1000,
@@ -9,7 +9,7 @@ var goodsJson = [
   },
   {
     "id": 1,
-    "photopath": '/images/goods.jpg',
+    "photopath": '/images/Diamond/',
     "name": '选课一时爽，期末火葬场',
     "price": 1,
     "number": 10000,
@@ -17,7 +17,7 @@ var goodsJson = [
   },
   {
     "id": 2,
-    "photopath": '/images/goods.jpg',
+    "photopath": '/images/Diamond/',
     "name": '我，有钱',
     "price": 1000,
     "number": 1000,
@@ -25,7 +25,7 @@ var goodsJson = [
   },
   {
     "id": 3,
-    "photopath": '/images/goods.jpg',
+    "photopath": '/images/Diamond/',
     "name": '两开花，两开花',
     "price": 2,
     "number": 1000,
@@ -33,7 +33,7 @@ var goodsJson = [
   },
   {
     "id": 4,
-    "photopath": '/images/goods.jpg',
+    "photopath": '/images/Diamond/',
     "name": '真好，真棒',
     "price": 1,
     "number": 100000,
@@ -41,7 +41,7 @@ var goodsJson = [
   },
   {
     "id": 5,
-    "photopath": '/images/goods.jpg',
+    "photopath": '/images/Diamond/',
     "name": 'Time is money',
     "price": 9.9,
     "number": 1000,
@@ -49,7 +49,7 @@ var goodsJson = [
   },
   {
     "id": 6,
-    "photopath": '/images/goods.jpg',
+    "photopath": '/images/Diamond/',
     "name": '贫穷限制了我的想象力',
     "price": 1,
     "number": 10000000,
@@ -57,7 +57,7 @@ var goodsJson = [
   },
   {
     "id": 7,
-    "photopath": '/images/goods.jpg',
+    "photopath": '/images/Diamond/',
     "name": '千金难买爷乐意',
     "price": 1001,
     "number": 1001,
@@ -65,7 +65,7 @@ var goodsJson = [
   },
   {
     "id": 8,
-    "photopath": '/images/goods.jpg',
+    "photopath": '/images/Diamond/',
     "name": '孤单是一种病',
     "price": 1.1,
     "number": 11111,
@@ -73,7 +73,7 @@ var goodsJson = [
   },
   {
     "id": 9,
-    "photopath": '/images/goods.jpg',
+    "photopath": '/images/Diamond/',
     "name": '我爱你——钻链珍藏版',
     "price": 1314,
     "number": 1000,
@@ -81,7 +81,7 @@ var goodsJson = [
   },
   {
     "id": 10,
-    "photopath": '/images/goods.jpg',
+    "photopath": '/images/Diamond/',
     "name": '纪念日！！！！！',
     "price": 9.9,
     "number": 10000,

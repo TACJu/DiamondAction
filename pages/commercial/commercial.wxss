@@ -29,31 +29,36 @@
 
 .goods-picture
 {
-  width: 375rpx;
+  width: 360rpx;
   height: 360rpx;
 }
 
 .goods-information
 {
-  margin-top: 120rpx;
+  margin-top: 75rpx;
   display: flex;
   flex-direction: column;
 }
 
 .goods-name
 {
+  margin-left: 30rpx;
+  margin-bottom: 48rpx;
   font-size: 30rpx;
   line-height: 42rpx;
 }
 
 .goods-price
 {
+  margin-left: 30rpx;
+  margin-bottom: 48rpx;
   font-size: 30rpx;
   line-height: 42rpx;
 }
 
 .goods-number
 {
+  margin-left: 30rpx;
   font-size: 30rpx;
   line-height: 42rpx;
 }
