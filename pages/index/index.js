@@ -3,14 +3,16 @@
 const app = getApp()
 
 var util = require("../../utils/util.js");
+var localData = require('../../data/goods.js');
 
 Page({
   data: {
-    motto: 'Hello World',
+    //motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    timeString: '你'
+    timeString: '你',
+    hotMottos: []
   },
   //事件处理函数
   bindViewTap: function() {
@@ -18,6 +20,48 @@ Page({
       url: '../logs/logs'
     })
   },
+
+  setTimeString: function () {
+    let time = new Date().getHours();
+    if (time >= 5 && time < 9) {
+      this.setData({
+        timeString: "早上"
+      })
+    }
+    else if (time >= 9 && time < 11) {
+      this.setData({
+        timeString: "上午"
+      })
+    }
+    else if (time >= 11 && time < 13) {
+      this.setData({
+        timeString: "中午"
+      })
+    }
+    else if (time >= 13 && time < 18) {
+      this.setData({
+        timeString: "下午"
+      })
+    }
+    else if (time >= 18 && time < 24) {
+      this.setData({
+        timeString: "晚上"
+      })
+    }
+    else {
+      this.setData({
+        timeString: "你"
+      })
+    }
+  }, 
+
+  goToMerchant: function(event) {
+    let id = event.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/subcommercial/subcommercial?id=' + id,
+    })
+  },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
@@ -45,38 +89,14 @@ Page({
         }
       })
     }
-    let time = new Date().getHours();
-    if (time >= 5 && time < 9) {
-      this.setData({
-        timeString : "早上"
-      })
+    this.setTimeString();
+    let hotList = [];
+    for (let index in localData.goodsList) {
+      hotList.push(localData.goodsList[index]);
     }
-    else if (time >= 9 && time < 11) {
-      this.setData({
-        timeString: "上午"
-      })
-    }
-    else if (time >= 11 && time < 13) {
-      this.setData({
-        timeString: "中午"
-      })
-    }
-    else if (time >= 13 && time < 18) {
-      this.setData({
-        timeString: "下午"
-      })
-    }
-    if (time >= 18 && time < 24) {
-      this.setData({
-        timeString: "晚上"
-      })
-    }
-    else {
-      this.setData({
-        timeString: "你"
-      })
-    }
+    this.setData({hotMottos:hotList});
   },
+
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo

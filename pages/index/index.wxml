@@ -6,6 +6,25 @@
       <text class="userinfo-nickname">{{timeString}}好，{{userInfo.nickName}}</text>
     </block>
   </view>
+  <view class='recommend'>
+    <text class='recommend-label'>为您推荐:\n</text>
+    <swiper class='recommend-text'
+    indicator-dots='{{false}}'
+    autoplay='{{true}}'
+    interval='{{3000}}'
+    vertical='{{true}}'
+    circular='{{true}}'
+    duration='{{3000}}'
+    >
+      <block wx:for='{{hotMottos}}'>
+        <swiper-item>
+          <text class='Rtext'
+          bindtap='goToMerchant'
+          data-id='{{item.id}}'>{{item.name}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
 <!--  <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view> -->

@@ -13,27 +13,27 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "backgroundColor": "CAE1FF",
-    "color": "#bfbfbf",
+    "backgroundColor": "#bce1ff",
+    "color": "#B3B3B3",
     "selectedColor": "#d81e06",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首 页",
-        "iconPath": "/images/1.png",
-        "selectedIconPath": "/images/1.png"
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home.png"
       },
       {
         "pagePath": "pages/commercial/commercial",
         "text": "淘 钻",
-        "iconPath": "/images/1.png",
-        "selectedIconPath": "/images/1.png"
+        "iconPath": "/images/shop1.png",
+        "selectedIconPath": "/images/shop1.png"
       },
       {
         "pagePath": "pages/myself/myself",
         "text": "我 的",
-        "iconPath": "/images/1.png",
-        "selectedIconPath": "/images/1.png"
+        "iconPath": "/images/me1.png",
+        "selectedIconPath": "/images/me2.png"
       }
     ]
   }
