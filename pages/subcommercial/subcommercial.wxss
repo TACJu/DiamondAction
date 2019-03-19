@@ -45,3 +45,8 @@
   font-size: 30rpx;
   line-height: 42rpx;
 }
+
+.shop
+{
+  margin-top: 190rpx;
+}
