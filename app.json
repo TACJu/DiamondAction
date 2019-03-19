@@ -4,7 +4,9 @@
     "pages/logs/logs",
     "pages/commercial/commercial",
     "pages/myself/myself",
-    "pages/subcommercial/subcommercial"
+    "pages/subcommercial/subcommercial",
+    "pages/history/history",
+    "pages/diamonds/diamonds"
   ],
   "window": {
     "backgroundTextStyle": "light",

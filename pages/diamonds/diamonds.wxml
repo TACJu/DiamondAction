@@ -1,0 +1,23 @@
+<view class="top">
+  My Diamonds
+</view>
+<button class="long-button">
+  <view class="list-title">
+    <view class="left">Diamond1</view>
+  </view>
+</button>
+<button class="long-button">
+  <view class="list-title">
+    <view class="left">Diamond2</view>
+  </view>
+</button>
+<button class="long-button">
+  <view class="list-title">
+    <view class="left">Diamond3</view>
+  </view>
+</button>
+<button class="long-button">
+  <view class="list-title">
+    <view class="left">Diamond4</view>
+  </view>
+</button>
