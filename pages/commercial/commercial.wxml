@@ -2,15 +2,13 @@
   <image class='commercial-bg' src='/images/store.jpg' mode='scaleToFill'></image>
 </view>
 
-<scroll-view scroll-x>
-  <view class='goods-list'>
-    <view class='goods-item' wx:for='{{merchandise}}'>
-      <image class='goods-picture' src='{{item.photopath}}'></image>
-      <view class='goods-information'>
-        <view class='goods-name'>{{item.name}}</view>
-        <view class='goods-price'>{{item.price}}</view>
-        <view class='goods-number'>{{item.number}}</view>
-      </view>
+<view class='goods-list'>
+  <view class='goods-item' wx:for='{{merchandise}}' data-id='{{item.id}}' bindtap='goToSubpage'>
+    <image class='goods-picture' src='{{item.photopath}}'></image>
+    <view class='goods-information'>
+      <view class='goods-name'>{{item.name}}</view>
+      <view class='goods-price'>{{item.price}}</view>
+      <view class='goods-number'>{{item.number}}</view>
     </view>
   </view>
-</scroll-view>
+</view>

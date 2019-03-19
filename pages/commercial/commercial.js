@@ -1,3 +1,5 @@
+var localData = require('../../data/goods.js')
+
 Page({
 
   /**
@@ -26,18 +28,16 @@ Page({
    */
   getGoods(callback)
   {
-    let merchandise = []
-    for (let i = 0; i < 8; i += 1)
-    {
-      merchandise.push({
-        photopath: '/images/goods.jpg',
-        name: '贫穷限制了我的想象力',
-        price: '价格：0.1',
-        number: '剩余数量：1111111',
-      })
-    }
     this.setData({
-      merchandise: merchandise
+      merchandise: localData.goodsList
+    })
+  },
+
+  goToSubpage(event)
+  {
+    let id = event.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/subcommercial/subcommercial?id=' + id,
     })
   },
 
