@@ -14,11 +14,13 @@ Page({
     timeString: '你',
     hotMottos: [],
     swiperPics: [
-      "../../images/Diamond/0.jpg",
-      "../../images/Diamond/1.jpg",
-      "../../images/Diamond/2.jpg",
-      "../../images/Diamond/3.jpg",
+      "/images/Diamond/0.jpg",
+      "/images/Diamond/1.jpg",
+      "/images/Diamond/2.jpg",
+      "/images/Diamond/3.jpg",
+      "/images/Diamond/4.jpg",
     ],
+    searchValue: "",
   },
 
   setTimeString: function () {
@@ -60,6 +62,17 @@ Page({
     wx.navigateTo({
       url: '/pages/subcommercial/subcommercial?id=' + id,
     })
+  },
+
+  getInput: function(event) {
+    this.searchValue = event.detail.value;
+  },
+
+  goToSearch: function(event) {
+    if (this.searchValue)
+      wx.navigateTo({
+        url: '/pages/search/search?query=' + this.searchValue,
+      })
   },
 
   onLoad: function () {

@@ -6,7 +6,8 @@
     "pages/myself/myself",
     "pages/subcommercial/subcommercial",
     "pages/history/history",
-    "pages/diamonds/diamonds"
+    "pages/diamonds/diamonds",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -15,7 +16,7 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "backgroundColor": "#bce1ff",
+    "backgroundColor": "#ffffff",
     "color": "#B3B3B3",
     "selectedColor": "#d81e06",
     "list": [

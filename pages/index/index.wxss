@@ -1,8 +1,49 @@
 /**index.wxss**/
 page{
   width: 100%;
-  height: 100%;
-  background:linear-gradient(140deg, #ffffff, #bce1ff);
+  background:linear-gradient(#cccccc);
+}
+.page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.search-content {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10rpx;
+}
+.search-box {
+  width: 80%;
+}
+.fake-search-button {
+  margin-left: 15rpx;
+  width: 15%;
+  line-height: 150%;
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+}
+.searchcion {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  position: absolute;
+  left:25rpx;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+.search {
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+}
+.search input{
+  margin-left: 60rpx;
+  height: 60rpx;
+  border-radius: 5px;
 }
 
 .userinfo {
@@ -11,27 +52,15 @@ page{
   align-items: center;
 }
 
-.section__ctn{
-  text-align: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
 .userinfo-nickname {
   color: #000000;
   font-size: 40rpx;
-  position: absolute;
-  top: 10rpx;
 }
 
-.page-container {
-  width: 100%;
+.main-swiper {
+  height: 800rpx;
 }
+
 .recommend-label {
   position: relative;
   left: 20rpx;
