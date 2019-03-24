@@ -1,1 +1,5 @@
 /* pages/search/search.wxss */
+page{
+  width: 100%;
+  background:#111111;
+}

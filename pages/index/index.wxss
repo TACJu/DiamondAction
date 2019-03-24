@@ -1,7 +1,7 @@
 /**index.wxss**/
 page{
   width: 100%;
-  background:linear-gradient(#cccccc);
+  background:#111111;
 }
 .page-container {
   width: 100%;
@@ -11,6 +11,7 @@ page{
 
 
 .search-content {
+  padding-top: 10rpx;
   display: flex;
   flex-direction: row;
   padding-bottom: 10rpx;
@@ -24,6 +25,7 @@ page{
   line-height: 150%;
   text-align: center;
   border: 1px solid #d0d0d0;
+  color: #d0d0d0;
   border-radius: 10rpx;
 }
 .searchcion {
@@ -40,10 +42,13 @@ page{
   border-radius: 10rpx;
   margin-left: 20rpx;
 }
-.search input{
+.search input {
   margin-left: 60rpx;
   height: 60rpx;
   border-radius: 5px;
+}
+.search-text {
+  color: #d0d0d0;
 }
 
 .userinfo {
@@ -71,4 +76,5 @@ page{
 }
 .Rtext {
   font-size: 50rpx;
+  color: #d0d0d0;
 }

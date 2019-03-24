@@ -3,7 +3,7 @@
     <view class="search-box">
       <view class="search">
         <icon class='searchcion' size='20' type='search'></icon>
-        <input
+        <input class='search-text'
         bindconfirm='goToSearch'
         type='text'
         placeholder="{{timeString}}好，{{userInfo.nickName}}" 
