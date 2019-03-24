@@ -1,14 +1,11 @@
-<view class='commercial-wrapper'>
-  <image class='commercial-bg' src='/images/store.jpg' mode='scaleToFill'></image>
-</view>
+<view class='bg'>
+  <view class='commercial-wrapper'>
+    <image class='commercial-bg' src='/images/BG/commercial-bg.jpg'  mode='scaleToFill'></image>
+  </view>
 
-<view class='goods-list'>
-  <view class='goods-item' wx:for='{{merchandise}}' data-id='{{item.id}}' bindtap='goToSubpage'>
-    <image class='goods-picture' src='{{item.photopath}}{{item.id}}.jpg'></image>
-    <view class='goods-information'>
-      <view class='goods-name'>{{item.name}}</view>
-      <view class='goods-price'>{{item.price}}</view>
-      <view class='goods-number'>{{item.number}}</view>
+  <view class='goods-list'>
+    <view class='goods-item' wx:for='{{merchandise}}' data-id='{{item.id}}' bindtap='goToSubpage'>
+      <image class='goods-picture' src='{{item.photopath}}{{item.imageID}}.jpg'></image>
     </view>
   </view>
 </view>

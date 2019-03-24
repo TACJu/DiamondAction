@@ -48,5 +48,7 @@
 
 .shop
 {
-  margin-top: 190rpx;
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
 }
