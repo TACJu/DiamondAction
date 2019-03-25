@@ -5,7 +5,7 @@
 
   <view class='goods-list'>
     <view class='goods-item' wx:for='{{merchandise}}' data-id='{{item.id}}' bindtap='goToSubpage'>
-      <image class='goods-picture' src='{{item.photopath}}{{item.imageID}}.jpg'></image>
+      <image class='goods-picture' src='{{item.photopath}}{{item.id}}.jpg'></image>
     </view>
   </view>
 </view>

@@ -31,14 +31,6 @@ Page({
     this.setData({
       merchandise: localData.goodsList
     })
-    var len = this.data.merchandise.length;
-    for (var i = 0; i < len; i++)
-    {
-      this.data.merchandise[i]['imageID'] = this.data.merchandise[i]['id'] % 5;
-    }
-    this.setData({
-      merchandise: this.data.merchandise
-    })
   },
 
   goToSubpage(event)
