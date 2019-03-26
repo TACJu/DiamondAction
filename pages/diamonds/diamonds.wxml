@@ -1,23 +1,9 @@
-<view class="top">
-  My Diamonds
+<view style="height:10rpx;background: #eee;width:100%;"></view>
+<view class="diamonds-item">
+  <navigator hover-class="none">
+    <view class="list-title">
+      <view>两开花，两开花</view>
+      <view class="right">×10</view>
+    </view>
+  </navigator>
 </view>
-<button class="long-button">
-  <view class="list-title">
-    <view class="left">Diamond1</view>
-  </view>
-</button>
-<button class="long-button">
-  <view class="list-title">
-    <view class="left">Diamond2</view>
-  </view>
-</button>
-<button class="long-button">
-  <view class="list-title">
-    <view class="left">Diamond3</view>
-  </view>
-</button>
-<button class="long-button">
-  <view class="list-title">
-    <view class="left">Diamond4</view>
-  </view>
-</button>

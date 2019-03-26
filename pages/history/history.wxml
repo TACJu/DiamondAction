@@ -1,51 +1,9 @@
-<view class="top">
-  Trade History
+<view style="height:10rpx;background: #eee;width:100%;"></view>
+<view class="history-item">
+  <navigator hover-class="none">
+    <view class="list-title">
+      <view>两开花，两开花</view>
+      <view class="right">￥20</view>
+    </view>
+  </navigator>
 </view>
-<button class="long-button">
-  <view class="list-title">
-    <view class="left">Diamond1</view>
-    <view class="right">Price1</view>
-  </view>
-</button>
-<button class="long-button">
-  <view class="list-title">
-    <view class="left">Diamond2</view>
-    <view class="right">Price2</view>
-  </view>
-</button>
-<button class="long-button">
-  <view class="list-title">
-    <view class="left">Diamond3</view>
-    <view class="right">Price3</view>
-  </view>
-</button>
-<button class="long-button">
-  <view class="list-title">
-    <view class="left">Diamond4</view>
-    <view class="right">Price4</view>
-  </view>
-</button>
-<button class="long-button">
-  <view class="list-title">
-    <view class="left">Diamond5</view>
-    <view class="right">Price5</view>
-  </view>
-</button>
-<button class="long-button">
-  <view class="list-title">
-    <view class="left">Diamond6</view>
-    <view class="right">Price6</view>
-  </view>
-</button>
-<button class="long-button">
-  <view class="list-title">
-    <view class="left">Diamond7</view>
-    <view class="right">Price7</view>
-  </view>
-</button>
-<button class="long-button">
-  <view class="list-title">
-    <view class="left">Diamond8</view>
-    <view class="right">Price8</view>
-  </view>
-</button>

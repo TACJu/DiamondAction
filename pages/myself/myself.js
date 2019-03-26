@@ -48,15 +48,5 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  },
-  goToHistory: function(){
-    wx.navigateTo({
-      url: '/pages/history/history',
-    })
-  },
-  goToDiamonds: function(){
-    wx.navigateTo({
-      url: '/pages/diamonds/diamonds',
-    })
   }
 })
