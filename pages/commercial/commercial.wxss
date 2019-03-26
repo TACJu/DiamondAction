@@ -20,7 +20,7 @@ page{
 
 .commercial-bg
 {
-  width: 90%;
+  width: 95%;
 }
 
 .goods-list
@@ -39,6 +39,6 @@ page{
 
 .goods-picture
 {
-  width: 90%;
+  width: 95%;
   height: 600rpx;
 }
