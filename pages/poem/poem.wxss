@@ -19,46 +19,6 @@ page{
   justify-content: center;
 }
 
-.commercial-bg
-{
-  width: 95%;
-}
-
-.catagory{
-  height: 100rpx;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.new{
-  background-color: black;
-  color: white;
-  margin-right: 120rpx;
-  font-size: 40rpx;
-}
-
-.heart{
-  background-color: black;
-  color: white;
-  margin-right: 120rpx;
-  font-size: 40rpx;
-}
-
-.poem{
-  background-color: black;
-  color: white;
-  margin-right: 120rpx;
-  font-size: 40rpx;
-}
-
-.humor{
-  background-color: black;
-  color: white;
-  font-size: 40rpx;
-}
-
 .goods-list
 {
   display: flex;
@@ -77,4 +37,4 @@ page{
 {
   width: 95%;
   height: 600rpx;
-}
+}/* pages/Poem/poem.wxss */

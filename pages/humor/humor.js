@@ -20,49 +20,22 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    this.getGoods(()=>wx.stopPullDownRefresh())
+    this.getGoods(() => wx.stopPullDownRefresh())
   },
 
   /**
    * 获取商品信息，callback用于指定是否调用wx.stopPullDownRefresh()
    */
-  getGoods(callback)
-  {
+  getGoods(callback) {
     this.setData({
       merchandise: localData.goodsList
     })
   },
 
-  goToSubpage(event)
-  {
+  goToSubpage(event) {
     let id = event.currentTarget.dataset.id
     wx.navigateTo({
       url: '/pages/subcommercial/subcommercial?id=' + id,
-    })
-  },
-
-  goToNew(event)
-  {
-    wx.navigateTo({
-      url: '/pages/new/new',
-    })
-  },
-
-  goToHeart(event) {
-    wx.navigateTo({
-      url: '/pages/heart/heart',
-    })
-  },
-
-  goToPoem(event) {
-    wx.navigateTo({
-      url: '/pages/poem/poem',
-    })
-  },
-
-  goToHumor(event) {
-    wx.navigateTo({
-      url: '/pages/humor/humor',
     })
   },
 
@@ -70,6 +43,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
+
   }
 })
