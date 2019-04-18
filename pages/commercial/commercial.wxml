@@ -11,7 +11,7 @@
       circular='{{true}}'
     >
       <block wx:for='{{activity_bg}}'>
-      <swiper-item class='test'>
+      <swiper-item class='test' data-name='{{item.name}}' bindtap='goToActivity'>
         <image class='activity_photo' src='{{item.photopath}}{{item.name}}.jpg'></image>
       </swiper-item>
       </block>

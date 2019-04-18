@@ -46,6 +46,15 @@ Page({
     })
   },
 
+  goToActivity(event)
+  {
+    console.log(event.currentTarget.dataset)
+    let name = event.currentTarget.dataset.name
+    wx.navigateTo({
+      url: '/pages/activity/' + name + '/' + name,
+    })
+  },
+
   goToNew(event)
   {
     wx.navigateTo({

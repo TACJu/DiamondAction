@@ -11,7 +11,10 @@
     "pages/new/new",
     "pages/heart/heart",
     "pages/poem/poem",
-    "pages/humor/humor"
+    "pages/humor/humor",
+    "pages/activity/xiaoqing/xiaoqing",
+    "pages/activity/liulangdiqiu/liulangdiqiu",
+    "pages/activity/libai/libai"
   ],
   "window": {
     "backgroundTextStyle": "light",
