@@ -1,4 +1,5 @@
 var localData = require('../../data/goods.js')
+var activityData = require('../../data/activity.js')
 
 Page({
 
@@ -6,14 +7,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    merchandise: []
+    merchandise: [],
+    activity_bg: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad() {
-    this.getGoods()
+    this.getData()
   },
 
   /**
@@ -26,10 +28,13 @@ Page({
   /**
    * 获取商品信息，callback用于指定是否调用wx.stopPullDownRefresh()
    */
-  getGoods(callback)
+  getData(callback)
   {
     this.setData({
       merchandise: localData.goodsList
+    })
+    this.setData({
+      activity_bg: activityData.activityList
     })
   },
 
