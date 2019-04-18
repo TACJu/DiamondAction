@@ -1,6 +1,28 @@
 <view class='bg'>
   <view class='commercial-wrapper'>
-    <image class='commercial-bg' src='/images/BG/commercial-bg.jpg'  mode='scaleToFill'></image>
+    <swiper 
+      class='activities'
+      indicator-dots='{{true}}'
+      indicator-color='#999999'
+      indicator-active-color='#fcfcfc'
+      autoplay='{{true}}'
+      interval='{{5000}}'
+      duration='{{1000}}'
+      circular='{{true}}'
+    >
+      <block wx:for='{{activity_bg}}'>
+      <swiper-item class='test'>
+        <image class='activity_photo' src='{{item.photopath}}{{item.name}}.jpg'></image>
+      </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='catagory'>
+      <text class='new' bindtap='goToNew'>时事</text>
+      <text class='heart' bindtap='goToHeart'>心意</text>
+      <text class='poem' bindtap='goToPoem'>诗句</text>
+      <text class='humor' bindtap='goToHumor'>幽默</text>
   </view>
 
   <view class='goods-list'>

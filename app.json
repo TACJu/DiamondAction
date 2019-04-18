@@ -7,7 +7,11 @@
     "pages/subcommercial/subcommercial",
     "pages/history/history",
     "pages/diamonds/diamonds",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/new/new",
+    "pages/heart/heart",
+    "pages/poem/poem",
+    "pages/humor/humor"
   ],
   "window": {
     "backgroundTextStyle": "light",
