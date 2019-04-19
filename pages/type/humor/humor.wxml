@@ -1,6 +1,6 @@
 <view class='bg'>
   <view class='goods-list'>
-    <view class='goods-item' wx:if='{{item.activity == "xiaoqing"}}' wx:for='{{merchandise}}' data-id='{{item.id}}' bindtap='goToSubpage'>
+    <view class='goods-item' wx:if='{{item.type == "humor"}}' wx:for='{{merchandise}}' data-id='{{item.id}}' bindtap='goToSubpage'>
       <image class='goods-picture' src='{{item.photopath}}{{item.id}}.jpg'></image>
     </view>
   </view>

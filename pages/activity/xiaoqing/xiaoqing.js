@@ -1,64 +1,46 @@
-// pages/activity/xiaoqing/xiaoqing.js
+var localData = require('../../../data/goods.js')
+
 Page({
 
   /**
-   * Page initial data
+   * 页面的初始数据
    */
   data: {
-
+    merchandise: []
   },
 
   /**
-   * Lifecycle function--Called when page load
+   * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad() {
+    this.getGoods()
   },
 
   /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
+   * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.getGoods(() => wx.stopPullDownRefresh())
   },
 
   /**
-   * Called when page reach bottom
+   * 获取商品信息，callback用于指定是否调用wx.stopPullDownRefresh()
    */
-  onReachBottom: function () {
+  getGoods(callback) {
+    this.setData({
+      merchandise: localData.goodsList
+    })
+  },
 
+  goToSubpage(event) {
+    let id = event.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/subcommercial/subcommercial?id=' + id,
+    })
   },
 
   /**
-   * Called when user click on the top right corner to share
+   * 用户点击右上角分享
    */
   onShareAppMessage: function () {
 

@@ -63,25 +63,25 @@ Page({
   goToNew(event)
   {
     wx.navigateTo({
-      url: '/pages/new/new',
+      url: '/pages/type/new/new',
     })
   },
 
   goToHeart(event) {
     wx.navigateTo({
-      url: '/pages/heart/heart',
+      url: '/pages/type/heart/heart',
     })
   },
 
   goToPoem(event) {
     wx.navigateTo({
-      url: '/pages/poem/poem',
+      url: '/pages/type/poem/poem',
     })
   },
 
   goToHumor(event) {
     wx.navigateTo({
-      url: '/pages/humor/humor',
+      url: '/pages/type/humor/humor',
     })
   },
 
