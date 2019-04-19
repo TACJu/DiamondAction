@@ -108,7 +108,7 @@ var goodsJson = [
     "price": 9.9,
     "number": 10000,
     "description": '娄明于2019年2月28日软工课上挖出了这颗钻石'
-  }
+  },
 ]
 
 module.exports = {

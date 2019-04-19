@@ -11,6 +11,58 @@ page{
   background-size: 100% 100%;
 }
 
+.search-content {
+  padding-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10rpx;
+}
+.search-box {
+  width: 80%;
+}
+.fake-search-button {
+  margin-left: 15rpx;
+  width: 15%;
+  line-height: 150%;
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  color: #d0d0d0;
+  border-radius: 10rpx;
+}
+.searchcion {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  position: absolute;
+  left:25rpx;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+.search {
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+}
+.search input {
+  margin-left: 60rpx;
+  height: 60rpx;
+  border-radius: 5px;
+}
+.search-text {
+  color: #d0d0d0;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-nickname {
+  color: #000000;
+  font-size: 40rpx;
+}
+
 .commercial-wrapper
 {
   width: 100%;

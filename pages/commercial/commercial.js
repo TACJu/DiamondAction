@@ -1,7 +1,13 @@
+const app = getApp()
+
 var localData = require('../../data/goods.js')
 var activityData = require('../../data/activity.js')
 
 Page({
+
+  userInfo: {},
+  hasUserInfo: false,
+  canIUse: wx.canIUse('button.open-type.getUserInfo'),
 
   /**
    * 页面的初始数据
@@ -48,7 +54,6 @@ Page({
 
   goToActivity(event)
   {
-    console.log(event.currentTarget.dataset)
     let name = event.currentTarget.dataset.name
     wx.navigateTo({
       url: '/pages/activity/' + name + '/' + name,

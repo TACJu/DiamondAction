@@ -1,4 +1,18 @@
 <view class='bg'>
+  <view class='search-content'>
+    <view class="search-box">
+      <view class="search">
+        <icon class='searchcion' size='20' type='search'></icon>
+        <input class='search-text'
+        bindconfirm='goToSearch'
+        type='text'
+        placeholder="北京大学高富帅向东伟"/>
+      </view>
+    </view>
+    <view
+     class='fake-search-button'
+     bindtap='goToSearch'>找钻</view>
+  </view>
   <view class='commercial-wrapper'>
     <swiper 
       class='activities'
