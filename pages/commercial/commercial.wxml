@@ -1,4 +1,18 @@
 <view class='bg'>
+  <view class='search-content'>
+    <view class="search-box">
+      <view class="search">
+        <icon class='searchcion' size='20' type='search'></icon>
+        <input class='search-text'
+        bindconfirm='goToSearch'
+        type='text'
+        placeholder="北京大学高富帅向东伟"/>
+      </view>
+    </view>
+    <view
+     class='fake-search-button'
+     bindtap='goToSearch'>找钻</view>
+  </view>
   <view class='commercial-wrapper'>
     <swiper 
       class='activities'
@@ -11,7 +25,7 @@
       circular='{{true}}'
     >
       <block wx:for='{{activity_bg}}'>
-      <swiper-item class='test'>
+      <swiper-item class='test' data-name='{{item.name}}' bindtap='goToActivity'>
         <image class='activity_photo' src='{{item.photopath}}{{item.name}}.jpg'></image>
       </swiper-item>
       </block>

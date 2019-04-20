@@ -7,7 +7,16 @@ Page({
    */
   data: {
     id:'',
-    merchandise:[]
+    merchandise: {
+      "id": 0,
+      "photopath": '/images/Diamond/',
+      "name": '道路千万条，安全第一条',
+      "type": 'new',
+      "activity": 'liulangdiqiu',
+      "price": 1,
+      "number": 1000,
+      "description": '武家伟于2019年2月28日软工课上挖出了这颗钻石'
+      }
   },
 
   /**

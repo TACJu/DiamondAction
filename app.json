@@ -1,17 +1,19 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/commercial/commercial",
+    "pages/logs/logs",
     "pages/myself/myself",
     "pages/subcommercial/subcommercial",
     "pages/history/history",
     "pages/diamonds/diamonds",
     "pages/search/search",
-    "pages/new/new",
-    "pages/heart/heart",
-    "pages/poem/poem",
-    "pages/humor/humor"
+    "pages/type/new/new",
+    "pages/type/heart/heart",
+    "pages/type/poem/poem",
+    "pages/type/humor/humor",
+    "pages/activity/xiaoqing/xiaoqing",
+    "pages/activity/liulangdiqiu/liulangdiqiu",
+    "pages/activity/libai/libai"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -25,14 +27,8 @@
     "selectedColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "首 页",
-        "iconPath": "/images/home2.png",
-        "selectedIconPath": "/images/home2.png"
-      },
-      {
         "pagePath": "pages/commercial/commercial",
-        "text": "淘 钻",
+        "text": "首 页",
         "iconPath": "/images/shop4.png",
         "selectedIconPath": "/images/shop4.png"
       },

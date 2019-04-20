@@ -1,4 +1,4 @@
-var localData = require('../../data/goods.js')
+var localData = require('../../../data/goods.js')
 
 Page({
 
