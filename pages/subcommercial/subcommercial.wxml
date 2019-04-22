@@ -4,6 +4,9 @@
 
 <view class='goods-name'>钻石名称：{{merchandise.name}}</view>
 <view class='goods-price'>钻石价格：{{merchandise.price}}</view>
-<view class='goods-number'>钻石剩余数量：{{merchandise.number}}</view>
+<view class='goods-number'>钻石编号：{{merchandise.number}}</view>
 <view class='goods-description'>钻石描述：{{merchandise.description}}</view>
+<view class='price-line'>价格曲线：</view>
+<canvas class="canvas" canvas-id="lineGraph{{item.id}}"             disable-scroll="true" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler">
+</canvas>
 <button class='shop' type='default'>购买</button>
