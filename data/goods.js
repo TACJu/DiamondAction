@@ -109,6 +109,66 @@ var goodsJson = [
     "number": 10000,
     "description": '娄明于2019年2月28日软工课上挖出了这颗钻石'
   },
+  {
+    "id": 11,
+    "photopath": '/images/Diamond/',
+    "name": '祝北大生日快乐！',
+    "type": 'new',
+    "activity": 'xiaoqing',
+    "price": 5.4,
+    "number": 20000,
+    "description": '北大校庆专属事件钻石'
+  },
+  {
+    "id": 12,
+    "photopath": '/images/Diamond/',
+    "name": '北京大学121周年校庆',
+    "type": 'new',
+    "activity": 'xiaoqing',
+    "price": 5.4,
+    "number": 54,
+    "description": '北大校庆专属事件钻石'
+  },
+  {
+    "id": 13,
+    "photopath": '/images/Diamond/',
+    "name": '数字钻石北大红限定版',
+    "type": 'new',
+    "activity": 'xiaoqing',
+    "price": 5.4,
+    "number": 54,
+    "description": '北大校庆专属事件钻石'
+  },
+  {
+    "id": 14,
+    "photopath": '/images/Diamond/',
+    "name": '抽刀断水水更流，举杯消愁愁更愁。',
+    "type": 'poem',
+    "activity": 'libai',
+    "price": 10.0,
+    "number": 100,
+    "description": '诗仙李白专题钻石'
+  },
+  {
+    "id": 15,
+    "photopath": '/images/Diamond/',
+    "name": '事了拂衣去，深藏功与名。',
+    "type": 'poem',
+    "activity": 'libai',
+    "price": 9.9,
+    "number": 100,
+    "description": '诗仙李白专题钻石'
+  },
+  {
+    "id": 16,
+    "photopath": '/images/Diamond/',
+    "name": '桃花潭水深千尺，不及汪伦送我情。',
+    "type": 'poem',
+    "activity": 'libai',
+    "price": 99.0,
+    "number": 10,
+    "description": '诗仙李白专题钻石'
+  },
 ]
 
 module.exports = {
