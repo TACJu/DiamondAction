@@ -1,0 +1,7 @@
+<view class='bg'>
+  <view class='goods-list'>
+    <view class='goods-item' wx:if='{{item.activity == "free"}}' wx:for='{{merchandise}}' data-id='{{item.id}}' bindtap='goToSubpage'>
+      <image class='goods-picture' src='{{item.photopath}}{{item.id}}.jpg'></image>
+    </view>
+  </view>
+</view>
