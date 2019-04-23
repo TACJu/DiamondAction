@@ -1,21 +1,27 @@
-<view class="container">
-  <view class="userinfo">
-      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <block wx:else>
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+<view class="main">
+    <view class="header">
+
+        <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
         <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      </block>
-  </view>
+        <text class="about">关于我们</text>
+    </view>
+    <view style="height:25rpx;background: #eee;width:100%;"></view>
+    <view class="address-box">
+        <view class="address-manage">
+            
+            <navigator  url="/pages/history/history" hover-class="none">我的足迹👣</navigator>
+            
+        </view>
+    </view>
 
-  <view style="height:10rpx;background: #eee;width:100%;"></view>
-  <view class="my-item">
-    <navigator url="/pages/history/history" hover-class="none">History</navigator>
-  </view>
-  <view class="my-item">
-    <navigator url="/pages/diamonds/diamonds" hover-class="none">Diamonds</navigator>
-  </view>
+    <view class="address-box">
+        <view class="address-manage">
+            <navigator url="/pages/diamonds/diamonds" hover-class="none">我的钻石💎</navigator>
+        </view>
+    
+    </view>
 
-  <view style="height:20rpx;background: #eee;width:100%;"></view>
-  <view class="version">Powered by Team Diamond v0.0</view>
-  <view style="height:20rpx;background: #eee;width:100%;"></view>
+
+
+
 </view>

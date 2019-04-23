@@ -24,3 +24,9 @@ page {
     padding-left: 70rpx;
     font-size:40rpx;
 }
+.share
+{
+  color: black;
+ 
+  width: 100%;
+}

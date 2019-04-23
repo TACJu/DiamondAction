@@ -13,7 +13,9 @@
     "pages/type/humor/humor",
     "pages/activity/xiaoqing/xiaoqing",
     "pages/activity/liulangdiqiu/liulangdiqiu",
-    "pages/activity/libai/libai"
+    "pages/activity/libai/libai",
+    "pages/diamonds_plus/diamonds_plus",
+    "pages/orders/orders"
   ],
   "window": {
     "backgroundTextStyle": "light",
