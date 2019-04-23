@@ -1,4 +1,6 @@
 var localData = require('../../data/goods.js')
+var wxCharts = require('../../data/wxcharts.js')
+var lineChart = null
 
 Page({
 
@@ -16,7 +18,22 @@ Page({
       "price": 1,
       "number": 1000,
       "description": '武家伟于2019年2月28日软工课上挖出了这颗钻石'
+    }
+  },
+
+  touchHandler: function (e) {
+    lineChart.scrollStart(e);
+  },
+  moveHandler: function (e) {
+    lineChart.scroll(e);
+  },
+  touchEndHandler: function (e) {
+    lineChart.scrollEnd(e);
+    lineChart.showToolTip(e, {
+      format: function (item, category) {
+        return category + '号 ' + item.name + ':' + item.data + '元'
       }
+    });
   },
 
   /**
@@ -26,6 +43,40 @@ Page({
     this.setData({
       id:options.id,
       merchandise:localData.goodsList[options.id]
+    });
+
+    var price = new Array(20).fill(0);
+    var catagory = new Array(20).fill(0)
+    for (var i = 0; i < 20; i++)
+    {
+      price[i] = i + 0.99;
+    }
+    for (var i = 0; i < 20; i++) {
+      catagory[i] = i + 1;
+    }
+
+    
+    lineChart = new wxCharts ({
+      canvasId: 'lineGraph',
+      type: 'line',
+      categories: catagory,
+      series: [{
+        name: '',
+        data: price
+      }],
+      yAxis: {
+        title: '价格',
+        min: 0
+      },
+      width: 400,
+      height: 200,
+      dataLabel: true,
+      legend: false,
+      dataPointShape: true,
+      enableScroll: true,
+      extra: {
+        lineStyle: 'curve'
+      }
     })
   },
 
