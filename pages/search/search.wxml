@@ -1,2 +1,4 @@
 <!--pages/search/search.wxml-->
 <text style='color:#b0b0b0'>search:{{query}},没有找到相应内容</text>
+
+

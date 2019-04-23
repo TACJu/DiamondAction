@@ -1,4 +1,5 @@
 const app = getApp()
+var searchValue = ''
 
 var localData = require('../../data/goods.js')
 var activityData = require('../../data/activity.js')
@@ -14,7 +15,52 @@ Page({
    */
   data: {
     merchandise: [],
-    activity_bg: []
+    activity_bg: [],
+    centent_Show: true,
+    searchValue: '',
+  },
+
+  searchValueInput: function (e) {
+    var value = e.detail.value;
+    this.setData({
+      searchValue: value,
+    });
+    if (!value && this.data.productData.length == 0) {
+      this.setData({
+        centent_Show: false,
+      });
+    }
+  },
+
+
+  suo: function (e) {
+    var id = e.currentTarget.dataset.id
+    var program_id = app.program_id;
+    var that = this;
+    wx.request({
+      url: 'aaa.php',//这里填写后台给你的搜索接口
+      method: 'post',
+      data: { str: that.data.searchValue, program_id: program_id, style: id },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        if (res.data.length == 0) {
+          that.setData({
+            centent_Show: false,
+          });
+        }
+        that.setData({
+          nanshen_card: res.data,
+        });
+      },
+      fail: function (e) {
+        wx.showToast({
+          title: '网络异常！',
+          duration: 2000
+        });
+      },
+    });
   },
 
   /**
@@ -41,6 +87,23 @@ Page({
     })
     this.setData({
       activity_bg: activityData.activityList
+    })
+  },
+
+  goToSearch(event)
+  {
+    var query = ''
+    if (this.data.searchValue == '')
+    {
+      query = '北京大学高富帅向东伟'
+    }
+    else
+    {
+      query = this.data.searchValue
+    }
+    console.log(this.data.searchValue)
+    wx.navigateTo({
+      url: '/pages/search/search?query=' + query,
     })
   },
 

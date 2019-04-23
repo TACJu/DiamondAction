@@ -4,8 +4,10 @@
       <view class="search">
         <icon class='searchcion' size='20' type='search'></icon>
         <input class='search-text'
+        bindinput='searchValueInput'
         bindconfirm='goToSearch'
         type='text'
+        value="{{searchValue}}"
         placeholder="北京大学高富帅向东伟"/>
       </view>
     </view>
