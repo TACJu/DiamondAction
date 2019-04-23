@@ -18,7 +18,7 @@
         <view class="address-manage">
             <navigator url="/pages/diamonds/diamonds" hover-class="none">我的钻石💎</navigator>
         </view>
-    
+    <view style="height:1000rpx;background: #eee;width:100%;"></view>
     </view>
 
 

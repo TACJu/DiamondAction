@@ -11,12 +11,14 @@
 	flex-direction: column;
 	align-items: center;
   width: 750rpx;
+  color: black;
 }
 
 .userinfo-nickname {
   margin-top: 20rpx;
   margin-bottom: 20rpx;
   font-size: 14px;
+  color: black;
 }
 
 .version {
@@ -29,6 +31,7 @@
   color: black;
   position: fixed;
   bottom: 0rpx;
+
 }
 
 .my-item{
@@ -40,6 +43,8 @@
     line-height: 120rpx;
     padding-left: 100rpx;
     font-size:14px;
+    color: black;
+
 }
 
 .header{
@@ -51,6 +56,7 @@
     background: #AB956D;
     font-size: 28rpx;
     color: #fff;
+    
 }
 .header .thumb{
     position: absolute;
@@ -59,6 +65,7 @@
     width: 100rpx;
     height: 100rpx;
     border-radius: 50%;
+    color: black;
 }
 .userinfo-avatar {
     position: absolute;
