@@ -8,8 +8,22 @@ App({
     
     // 登录
     wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+      success(res) {// 发送 res.code 到后台换取 openId, sessionKey, unionId
+        if (res.code) {
+          // 发起网络请求
+          wx.request({
+            url: 'https://api.weixin.qq.com/sns/jscode2session',
+            data: {
+              code: res.code
+            },
+            success: function (res) {
+              console.log(res.data)
+            }
+          })
+          
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
       }
     })
     // 获取用户信息
@@ -37,3 +51,5 @@ App({
     userInfo: null
   }
 })
+
+

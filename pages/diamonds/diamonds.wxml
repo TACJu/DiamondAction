@@ -3,7 +3,27 @@
   <navigator hover-class="none">
     <view class="list-title">
       <view>两开花，两开花</view>
-      <view class="right">×10</view>
+      <view class="right">¥10</view>  
     </view>
   </navigator>
+
+
+</view>
+<view class="address-box">
+    <view class="address-manage">
+        
+        <navigator  url="/pages/diamonds/diamonds" hover-class="none">分享❤️</navigator>
+        
+    </view>
+    <view class="address-manage">
+        
+        <navigator  url="/pages/diamonds/diamonds"  hover-class="none">转赠🎁</navigator>
+        
+    </view>
+    <view class="address-manage">
+        
+        <navigator  url="/pages/diamonds_plus/diamonds_plus" hover-class="none">加刻💎</navigator>
+        
+    </view>
+
 </view>
