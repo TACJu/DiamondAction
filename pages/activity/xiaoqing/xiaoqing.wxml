@@ -1,7 +1,8 @@
 <view class='bg'>
   <view class='goods-list'>
     <view class='goods-item' wx:if='{{item.activity == "xiaoqing"}}' wx:for='{{merchandise}}' data-id='{{item.id}}' bindtap='goToSubpage'>
-      <image class='goods-picture' src='{{item.photopath}}{{item.id}}.jpg'></image>
+      <image wx:if='{{item.id <= 10}}' class='goods-picture' src='{{item.photopath}}{{item.id}}.jpg'></image>
+      <image wx:if='{{item.id > 10}}' class='goods-picture' src='{{item.photopath}}{{item.id - 10}}.jpg'></image>
     </view>
   </view>
 </view>

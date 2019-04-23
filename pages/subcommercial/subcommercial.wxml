@@ -1,5 +1,6 @@
 <view class='commercial-wrapper'>
-<image class='commercial-bg' src='{{merchandise.photopath}}{{merchandise.id}}.jpg' mode='scaleToFill'></image>
+<image wx:if='{{merchandise.id <= 10}}' class='commercial-bg' src='{{merchandise.photopath}}{{merchandise.id}}.jpg'></image>
+<image wx:if='{{merchandise.id > 10}}' class='commercial-bg' src='{{merchandise.photopath}}{{merchandise.id - 10}}.jpg'></image>
 </view>
 
 <view class='goods-name'>钻石名称：{{merchandise.name}}</view>
