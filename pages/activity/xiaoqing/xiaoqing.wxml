@@ -1,4 +1,5 @@
 <view class='bg'>
+  <image src='/images/Activity/xiaoqing.jpg'></image>
   <view class='goods-list'>
     <view class='goods-item' wx:if='{{item.activity == "xiaoqing"}}' wx:for='{{merchandise}}' data-id='{{item.id}}' bindtap='goToSubpage'>
       <image wx:if='{{item.id <= 10}}' class='goods-picture' src='{{item.photopath}}{{item.id}}.jpg'></image>
