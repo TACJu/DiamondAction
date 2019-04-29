@@ -28,7 +28,7 @@
     >
       <block wx:for='{{activity_bg}}'>
       <swiper-item class='test' data-name='{{item.name}}' bindtap='goToActivity'>
-        <image class='activity_photo' src='{{item.photopath}}{{item.name}}.jpg'></image>
+        <image class='activity_photo' src='{{item.photopath}}'></image>
       </swiper-item>
       </block>
     </swiper>
@@ -43,8 +43,7 @@
 
   <view class='goods-list'>
     <view class='goods-item' wx:for='{{merchandise}}' data-id='{{item.id}}' bindtap='goToSubpage'>
-      <image wx:if='{{item.id <= 10}}' class='goods-picture' src='{{item.photopath}}{{item.id}}.jpg'></image>
-      <image wx:if='{{item.id > 10}}' class='goods-picture' src='{{item.photopath}}{{item.id - 10}}.jpg'></image>
+      <image class='goods-picture' src='{{item.photopath}}.jpg'></image>
     </view>
   </view>
 </view>

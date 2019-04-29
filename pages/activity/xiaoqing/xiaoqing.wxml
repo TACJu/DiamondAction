@@ -1,9 +1,8 @@
 <view class='bg'>
-  <image src='/images/Activity/xiaoqing.jpg'></image>
+  <image class='activity-picture' src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Activity/xiaoqing.jpg?sign=d54c635dc9f80a67b7b49c05cc4a8f32&t=1556522533'></image>
   <view class='goods-list'>
     <view class='goods-item' wx:if='{{item.activity == "xiaoqing"}}' wx:for='{{merchandise}}' data-id='{{item.id}}' bindtap='goToSubpage'>
-      <image wx:if='{{item.id <= 10}}' class='goods-picture' src='{{item.photopath}}{{item.id}}.jpg'></image>
-      <image wx:if='{{item.id > 10}}' class='goods-picture' src='{{item.photopath}}{{item.id - 10}}.jpg'></image>
+      <image class='goods-picture' src='{{item.photopath}}.jpg'></image>
     </view>
   </view>
 </view>

@@ -32,14 +32,14 @@
       {
         "pagePath": "pages/commercial/commercial",
         "text": "首 页",
-        "iconPath": "/images/shop4.png",
-        "selectedIconPath": "/images/shop4.png"
+        "iconPath": "/images/Icon/shop.png",
+        "selectedIconPath": "/images/Icon/shop.png"
       },
       {
         "pagePath": "pages/myself/myself",
         "text": "我 的",
-        "iconPath": "/images/me.png",
-        "selectedIconPath": "/images/me.png"
+        "iconPath": "/images/Icon/me.png",
+        "selectedIconPath": "/images/Icon/me.png"
       }
     ]
   },

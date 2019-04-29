@@ -4,7 +4,7 @@
             <view class="cart-list" wx:for="{{carts}}" wx:key="{{index}}">
                 <icon wx:if="{{item.selected}}" type="success" color="red" data-index="{{index}}"  class="cart-pro-select" bindtap="selectList"/>
                 <icon wx:else type="circle" class="cart-pro-select" data-index="{{index}}" bindtap="selectList"/>
-                 <image class="cart-thumb"  src="/images/plus.jpg"></image>
+                 <image class="cart-thumb"  src="https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Myself/plus.png?sign=6b0a7a717d90587d04958eae6b9085f1&t=1556522841"></image>
                 <text class="cart-pro-name">{{item.title}}</text>
                 <text class="cart-pro-price">￥{{item.price}}</text>
                 <view class="cart-count-box">
@@ -19,7 +19,7 @@
         <view class="cart-footer">
             <icon wx:if="{{selectAllStatus}}" type="success_circle" color="#fff" class="total-select" bindtap="selectAll"/>
             <icon wx:else type="circle" color="#fff" class="total-select" bindtap="selectAll"/>
-            <view class="order-icon" bindtap="toPay"> <image src="/images/icon3.png"></image>
+            <view class="order-icon" bindtap="toPay"> <image src="https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Myself/icon.png?sign=14bcb68a982a72b4f3d684160ddd84f0&t=1556522873"></image>
 
                 
             </view>
