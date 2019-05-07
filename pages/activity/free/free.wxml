@@ -1,5 +1,5 @@
 <view class='bg'>
-  <image class='activity-picture' src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Activity/free.jpg?sign=e304cebdae1cd95e46d391e2e0a976e5&t=1556522295'></image>
+  <image class='activity-picture' src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Activity/free.jpg?sign=c2e504f8812fb6b49c2db180365df870&t=1557236336'></image>
   <view class='goods-list'>
     <view class='goods-item' wx:if='{{item.activity == "free"}}' wx:for='{{merchandise}}' data-id='{{item.id}}' bindtap='goToSubpage'>
       <image class='goods-picture' src='{{item.photopath}}.jpg'></image>

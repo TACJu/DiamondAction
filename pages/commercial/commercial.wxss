@@ -139,5 +139,5 @@ page{
 .goods-picture
 {
   width: 100%;
-  height: 600rpx;
+  height: 400rpx;
 }

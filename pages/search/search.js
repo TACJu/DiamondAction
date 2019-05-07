@@ -13,7 +13,7 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      query : options.query,
+      query: options.query,
     })
   },
 

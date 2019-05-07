@@ -25,11 +25,6 @@ Page({
     this.setData({
       searchValue: value,
     });
-    if (!value && this.data.productData.length == 0) {
-      this.setData({
-        centent_Show: false,
-      });
-    }
   },
 
 
@@ -101,7 +96,6 @@ Page({
     {
       query = this.data.searchValue
     }
-    console.log(this.data.searchValue)
     wx.navigateTo({
       url: '/pages/search/search?query=' + query,
     })
