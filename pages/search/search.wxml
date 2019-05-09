@@ -1,4 +1,19 @@
-<!--pages/search/search.wxml-->
-<text style='color:#b0b0b0'>search:{{query}},没有找到相应内容</text>
-
+<view class='bg'>
+  <view class='search-content'>
+    <view class="search-box">
+      <view class="search">
+        <icon class='searchcion' size='20' type='search'></icon>
+        <input class='search-text'
+        bindinput='searchValueInput'
+        bindconfirm='goToSearch'
+        type='text'
+        value="{{searchValue}}"
+        placeholder="{{query}}"/>
+      </view>
+    </view>
+    <view
+     class='fake-search-button'
+     bindtap='goToSearch'>找钻</view>
+  </view>
+</view>
 

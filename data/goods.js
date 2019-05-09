@@ -25,7 +25,7 @@ var goodsJson = [
     "name": '我，有钱',
     "type": 'humor',
     "activity": 'free',
-    "price": 1000,
+    "price": 999,
     "number": 1000,
     "description": '谢欣彤于2019年2月28日软工课上挖出了这颗钻石'
   },

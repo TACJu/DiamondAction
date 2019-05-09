@@ -16,7 +16,8 @@
     "pages/activity/liulangdiqiu/liulangdiqiu",
     "pages/activity/libai/libai",
     "pages/diamonds_plus/diamonds_plus",
-    "pages/orders/orders"
+    "pages/orders/orders",
+    "pages/dig/dig"
   ],
   "window": {
     "backgroundTextStyle": "light",
