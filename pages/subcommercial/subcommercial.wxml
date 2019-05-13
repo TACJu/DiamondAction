@@ -1,11 +1,11 @@
 <view class='commercial-wrapper'>
-<image class='commercial-bg' src='{{merchandise.photopath}}'></image>
+<image class='commercial-bg' src='{{merchandise.photoPath}}'></image>
 </view>
-<view class='goods-name'>钻石名称：{{merchandise.name}}</view>
-<view class='goods-price'>钻石价格：{{merchandise.price}}元</view>
-<view class='goods-number'>钻石编号：10</view>
+<view class='goods-name'>钻石名称：{{merchandise.content}}</view>
+<view class='goods-price'>钻石价格：{{price}}元</view>
+<view class='goods-number'>钻石编号：{{tmpcnt}}</view>
 <view class='goods-description'>钻石描述：{{merchandise.description}}</view>
 <view class='price-line'>价格曲线：</view>
-<canvas class="canvas" canvas-id="lineGraph{{item.id}}"             disable-scroll="true" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler">
+<canvas class="canvas" canvas-id="lineGraph{{item.id}}" disable-scroll="true" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler">
 </canvas>
-<button class='shop' type='default' bindtap='excuteContract'>购买</button>
+<button class='shop' type='default' bindtap='gotoBuy'>购买</button>

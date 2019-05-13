@@ -1,8 +1,8 @@
 <view class='bg'>
   <image class='activity-picture' src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Activity/libai.jpg?sign=b2bd4515475706d502b4c1f51a7609d8&t=1556522448'></image>
   <view class='goods-list'>
-    <view class='goods-item' wx:if='{{item.activity == "libai"}}' wx:for='{{merchandise}}' data-id='{{item.id}}' bindtap='goToSubpage'>
-      <image class='goods-picture' src='{{item.photopath}}.jpg'></image>
+    <view class='goods-item' wx:if='{{item.activity == "libai"}}' wx:for='{{merchandise}}' data-id='{{item.cid}}' bindtap='goToSubpage'>
+      <image class='goods-picture' src='{{item.photoPath}}.jpg'></image>
     </view>
   </view>
 </view>

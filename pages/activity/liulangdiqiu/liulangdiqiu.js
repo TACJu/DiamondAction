@@ -1,4 +1,4 @@
-var localData = require('../../../data/goods.js')
+const app = getApp()
 
 Page({
 
@@ -28,7 +28,7 @@ Page({
    */
   getGoods(callback) {
     this.setData({
-      merchandise: localData.goodsList
+      merchandise: app.goodsInfo
     })
   },
 

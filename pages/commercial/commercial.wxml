@@ -42,8 +42,8 @@
   </view>
 
   <view class='goods-list'>
-    <view class='goods-item' wx:for='{{merchandise}}' data-id='{{item.id}}' bindtap='goToSubpage'>
-      <image class='goods-picture' src='{{item.photopath}}.jpg'></image>
+    <view class='goods-item' wx:for='{{merchandise}}' data-id='{{item.cid}}' bindtap='goToSubpage'>
+      <image class='goods-picture' src='{{item.photoPath}}.jpg'></image>
     </view>
   </view>
 </view>

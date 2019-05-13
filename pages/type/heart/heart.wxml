@@ -1,8 +1,8 @@
 <view class='bg'>
   <image class='type-picture' src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Type/heart.jpg?sign=419421f6abecc35161ec49d1f2a92a20&t=1556529884'></image>
   <view class='goods-list'>
-    <view class='goods-item' wx:if='{{item.type == "heart"}}' wx:for='{{merchandise}}' data-id='{{item.id}}' bindtap='goToSubpage'>
-      <image class='goods-picture' src='{{item.photopath}}.jpg'></image>
+    <view class='goods-item' wx:if='{{item.type == "heart"}}' wx:for='{{merchandise}}' data-id='{{item.cid}}' bindtap='goToSubpage'>
+      <image class='goods-picture' src='{{item.photoPath}}.jpg'></image>
     </view>
   </view>
 </view>
