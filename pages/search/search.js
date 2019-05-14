@@ -10,6 +10,7 @@ Page({
     searchValue: '',
     searchcid: [],
     merchandise: [],
+    flag: false
   },
 
   searchValueInput: function (e) {
@@ -67,15 +68,21 @@ Page({
       dataType: "jsonp",
       success: function (res) {
         if (res.data) {
+          console.log(res.data)
           _this.setData({
             searchcid: JSON.parse((JSON.parse(JSON.parse(res.data).data)).result)
           })
           for (var i = 0; i < _this.data.searchcid.length; i++)
           {
+            if (_this.data.searchcid[i].sim == 1)
+            {
+              _this.data.flag = true
+            }
             _this.data.merchandise.push(app.goodsInfo[_this.data.searchcid[i].cid - 1])
           }
           _this.setData({
-            merchandise: _this.data.merchandise
+            merchandise: _this.data.merchandise,
+            flag: _this.data.flag
           })
         }
       }

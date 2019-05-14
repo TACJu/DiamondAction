@@ -22,6 +22,6 @@
     </view>
   </view>
 
-  <button class='dig' type='default' bindtap='goToDig'>挖掘</button>
+  <button wx:if='{{flag == false}}' class='dig' type='default' bindtap='goToDig'>挖掘</button>
 </view>
 
