@@ -1,2 +1,6 @@
-<!--pages/dig/dig.wxml-->
-<text>pages/dig/dig.wxml</text>
+<radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:for="{{items}}">
+    <radio bindtap="valueChange" value="{{item.name}}" checked="{{item.checked}}" />
+    {{item.value}}
+  </label>
+</radio-group>

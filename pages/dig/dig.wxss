@@ -1,1 +1,5 @@
-/* pages/dig/dig.wxss */
+.radio{
+    display: block;
+    margin-top: 10px;
+    margin-left: 5px;
+}

@@ -21,5 +21,7 @@
       <image class='goods-picture' src='{{item.photoPath}}.jpg'></image>
     </view>
   </view>
+
+  <button class='dig' type='default' bindtap='goToDig'>挖掘</button>
 </view>
 
