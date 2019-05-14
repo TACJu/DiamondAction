@@ -17,7 +17,8 @@
     "pages/activity/libai/libai",
     "pages/diamonds_plus/diamonds_plus",
     "pages/orders/orders",
-    "pages/dig/dig"
+    "pages/dig/dig",
+    "pages/term/term"
   ],
   "window": {
     "backgroundTextStyle": "light",

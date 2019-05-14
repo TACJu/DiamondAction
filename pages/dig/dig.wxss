@@ -1,5 +1,26 @@
+.term{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+}
+
+.check{
+  width: 10%;
+}
+
 .checkbox{
-    display: block;
-    margin-top: 10px;
-    margin-left: 5px;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: flex-end;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.dig
+{
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
 }

@@ -7,9 +7,8 @@ Page({
    */
   data: {
     query: '',
-    select: '',
     items: [
-      { name: 'provision', value: '我已阅读并同意上述条款', checked: false},
+      { name: 'provision', value: '我已阅读并同意', checked: false},
     ]
   },
 
@@ -18,9 +17,14 @@ Page({
     items[0].checked = !(items[0].checked)
     this.setData({
       items: items,
-      select: e.detail.value
     })
-    console.log('radio发生change事件，携带value值为：', e.detail.value)
+    console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+  },
+
+  goToTerm() {
+    wx.navigateTo({
+      url: '/pages/term/term',
+    })
   },
 
   goToDig() {
