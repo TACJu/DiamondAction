@@ -1,6 +1,26 @@
-<radio-group class="radio-group" bindchange="radioChange">
-  <label class="radio" wx:for="{{items}}">
-    <radio bindtap="valueChange" value="{{item.name}}" checked="{{item.checked}}" />
+<text> 
+想要成为“{{query}}”这颗尚未面世钻石的发掘者并拥有它吗？请先阅读并同意以下条款。
+
+若挖钻成功，钻石挖掘者将以最低价0.99元获得一颗此钻石。用户需自行承担因违反以下条款而导致的挖钻失败。
+
+《用户挖钻条款》
+1、用户不得利用钻石行动挖掘发布具有如下内容的钻石
+(1) 反对宪法所确定的基本原则的；
+(2) 危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；
+(3) 损害国家荣誉和利益的；
+(4) 煽动民族仇恨、民族歧视，破坏民族团结的；
+(5) 破坏国家宗教政策，宣扬邪教和封建迷信的；
+(6) 散布谣言，扰乱社会秩序，破坏社会稳定的；
+(7) 散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；
+(8) 侮辱或者诽谤他人，侵害他人合法权益的；
+(9) 含有法律、行政法规禁止的其他内容的信息。
+
+</text>
+<checkbox-group class="radio-group" bindchange="checkChange">
+  <label class="checkbox" wx:for="{{items}}">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}" />
     {{item.value}}
   </label>
-</radio-group>
+</checkbox-group>
+
+<button class='dig' type='default' bindtap='goToDig'>挖掘</button>
