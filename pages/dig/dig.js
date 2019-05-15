@@ -48,7 +48,7 @@ Page({
           "action": "executeContract",
           "contractID": "DiamondOperation",
           "operation": "mining",
-          "arg": encodeURIComponent("{\"user\": 1, \"content\":\"" + _this.data.query + "\", \"time\":\"" + time + "\"}"),
+          "arg": encodeURIComponent("{\"user\":\"" + app.globalData.openId + "\", \"content\":\"" + _this.data.query + "\", \"time\":\"" + time + "\"}"),
           "privKey": privKey
         },
         dataType: "jsonp",

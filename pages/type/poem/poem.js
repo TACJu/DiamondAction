@@ -28,7 +28,7 @@ Page({
    */
   getGoods(callback) {
     this.setData({
-      merchandise: app.goodsInfo
+      merchandise: app.globalData.goodsInfo
     })
   },
 

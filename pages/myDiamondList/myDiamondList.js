@@ -90,7 +90,7 @@ Page({
         "action": "executeContract",
         "contractID": "DiamondOperation",
         "operation": "myDiamonds",
-        "arg": "{\"user\":1}",
+        "arg": "{\"user\": \"" + app.globalData.openId + "\"}",
         "privKey": privKey
       },
       dataType: "jsonp",

@@ -56,7 +56,7 @@ Page({
         "action": "executeContract",
         "contractID": "DiamondOperation",
         "operation": "buy",
-        "arg": "{\"cid\":" + _this.data.id + ", \"buyer\": 1, \"price\":" + _this.data.price + ", \"time\":\"" + time + "\"}",
+        "arg": "{\"cid\":" + _this.data.id + ", \"buyer\":\"" + app.globalData.openId + "\", \"price\":" + _this.data.price + ", \"time\":\"" + time + "\"}",
         "privKey": privKey
       },
       dataType: "jsonp",
@@ -136,12 +136,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(app.goodsInfo)
     this.setData({
       options:options,
       banable:false,
       id:options.id,
-      merchandise:app.goodsInfo[options.id - 1]
+      merchandise: app.globalData.goodsInfo[options.id - 1]
     });
 
     this.updatecnt()

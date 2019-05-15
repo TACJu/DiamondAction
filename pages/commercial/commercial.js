@@ -55,9 +55,9 @@ Page({
       dataType: "jsonp",
       success: function (res) {
         if (res.data) {
-          app.goodsInfo = JSON.parse((JSON.parse(JSON.parse(res.data).data)).result)
+          app.globalData.goodsInfo = JSON.parse((JSON.parse(JSON.parse(res.data).data)).result)
           _this.setData({
-            merchandise: app.goodsInfo,
+            merchandise: app.globalData.goodsInfo,
             activity_bg: activityData.activityList
           })
           console.log(_this.data.merchandise)

@@ -1,4 +1,5 @@
-var openid ; 
+var openid
+
 //app.js
 /*
 App({
@@ -121,11 +122,19 @@ App({
 
 //app.js
 App({
+  globalData: {
+    userInfo: null,
+    userId: null,
+    goodsInfo: [],
+    openId: ""
+  },
+
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+    
 
 
     // 登录
@@ -167,6 +176,8 @@ App({
                   //console.log(((JSON.parse(JSON.parse(res.data).data)).data))
                   if (code == 200) {
                     openid = JSON.parse(JSON.parse(JSON.parse(JSON.parse(JSON.parse(data.data).data).result)).response).openid
+                    getApp().globalData.openId = openid
+                    console.log(that.globalData.openId)
                     //that.globalData.userId = data.data.data
                     //console.log(data.data.data)
                     if (that.employIdCallback) {
@@ -215,10 +226,7 @@ App({
         }
       }
     })
+
+    console.log(this.globalData)
   },
-  globalData: {
-    userInfo: null,
-    userId: null,
-    goodsInfo: []
-  }
 })
