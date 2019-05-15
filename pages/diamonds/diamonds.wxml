@@ -41,8 +41,5 @@
         <navigator  url="/pages/diamonds_plus/diamonds_plus" hover-class="none">点击加刻💎</navigator>      
     </view>
         <button class="address-manage" open-type ="share" data-content='{{content}}' >点击分享❤️</button>
-    <button class="address-manage">
-        <navigator  url="/pages/diamonds/diamonds"  hover-class="none">点击转赠🎁</navigator>
-        
-    </button>
+    <button class="address-manage" bindtap='transfer'>点击转赠🎁</button>
 </view>

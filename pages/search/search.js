@@ -78,7 +78,7 @@ Page({
             {
               _this.data.flag = true
             }
-            _this.data.merchandise.push(app.goodsInfo[_this.data.searchcid[i].cid - 1])
+            _this.data.merchandise.push(app.globalData.goodsInfo[_this.data.searchcid[i].cid - 1])
           }
           _this.setData({
             merchandise: _this.data.merchandise,
