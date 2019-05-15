@@ -55,38 +55,6 @@ Page({
 
   },
 
-  hello(event){
-    let that = this;
-    let titlename = event.currentTarget.dataset.content;
-    console.log(event);
-    console.log(event.currentTarget.dataset);
-    console.log(event.currentTarget.dataset.content);
-    return {
-      title: titlename, // 转发后 所显示的title
-      path: '/pages/diamonds/diamonds', // 相对的路径
-      success: (res) => {    // 成功后要做的事情
-        console.log(res.shareTickets[0])
-        // console.log
-        wx.getShareInfo({
-          shareTicket: res.shareTickets[0],
-          success: (res) => {
-            that.setData({
-              isShow: true
-            })
-            console.log(that.setData.isShow)
-          },
-          fail: function (res) { console.log(res) },
-          complete: function (res) { console.log(res) }
-        })
-      },
-      fail: function (res) {
-        // 分享失败
-        console.log(res)
-      }
-    }
-
-  },
-
   /**
    * 用户点击右上角分享
    */
@@ -103,7 +71,10 @@ Page({
 
     return {
       title: titlename, // 转发后 所显示的title
-      path: '/pages/diamonds/diamonds', // 相对的路径
+      path: '/pages/display/display?classid=' + classid 
+      + '&innerid=' + innerid + '&time=' + time
+      + '&description=' + description + '&content=' + content
+      + '&price=' + price, // 相对的路径
       success: (res) => {    // 成功后要做的事情
         console.log(res.shareTickets[0])
         // console.log
