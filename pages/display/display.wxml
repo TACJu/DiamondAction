@@ -6,10 +6,7 @@
       <view class="right">¥ {{price}}</view>  
     </view>
 
-</view>
-
-  
-       
+</view>   
   
 <view class="address-box">
   <view class="address-manage">
