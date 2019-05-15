@@ -19,7 +19,8 @@
     "pages/orders/orders",
     "pages/dig/dig",
     "pages/term/term",
-    "pages/myDiamondList/myDiamondList"
+    "pages/myDiamondList/myDiamondList",
+    "pages/display/display"
   ],
   "window": {
     "backgroundTextStyle": "light",
