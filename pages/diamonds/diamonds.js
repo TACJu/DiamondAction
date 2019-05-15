@@ -63,7 +63,7 @@ Page({
     console.log(event.currentTarget.dataset.content);
     return {
       title: titlename, // 转发后 所显示的title
-      path: '/pages/diamons/diamonds', // 相对的路径
+      path: '/pages/diamonds/diamonds', // 相对的路径
       success: (res) => {    // 成功后要做的事情
         console.log(res.shareTickets[0])
         // console.log
