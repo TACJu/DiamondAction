@@ -9,3 +9,4 @@
 <canvas class="canvas" canvas-id="lineGraph{{item.id}}" disable-scroll="true" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler">
 </canvas>
 <button class='shop' disabled='{{banable}}' type='default' bindtap='goToBuy'>购买</button>
+<!-- <button class='shop' type='default' bindtap='goToBuy'>购买</button> -->
