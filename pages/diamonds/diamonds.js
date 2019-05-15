@@ -1,3 +1,5 @@
+const app = getApp()
+
 Page({
 
   /**
@@ -10,9 +12,6 @@ Page({
     description: "",
     content:"",
     price: "",
-
-
-
   },
 
   /**
@@ -71,10 +70,10 @@ Page({
 
     return {
       title: titlename, // 转发后 所显示的title
-      path: '/pages/display/display?classid=' + classid 
-      + '&innerid=' + innerid + '&time=' + time
-      + '&description=' + description + '&content=' + content
-      + '&price=' + price, // 相对的路径
+      // path: '/pages/display/display?classid=' + classid 
+      // + '&innerid=' + innerid + '&time=' + time
+      // + '&description=' + description + '&content=' + content
+      // + '&price=' + price + '&nickname=' + app.globalData.userInfo.nickName, // 相对的路径
       success: (res) => {    // 成功后要做的事情
         console.log(res.shareTickets[0])
         // console.log
