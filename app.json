@@ -18,7 +18,8 @@
     "pages/diamonds_plus/diamonds_plus",
     "pages/orders/orders",
     "pages/dig/dig",
-    "pages/term/term"
+    "pages/term/term",
+    "pages/myDiamondList/myDiamondList"
   ],
   "window": {
     "backgroundTextStyle": "light",

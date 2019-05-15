@@ -1,31 +1,48 @@
 <view style="height:10rpx;background: #eee;width:100%;"></view>
 <view class="diamonds-item">
-  <navigator hover-class="none">
+
     <view class="list-title">
-      <view>两开花，两开花</view>
-      <view class="right">¥10</view>  
+      <view>{{content}}</view>
+      <view class="right">¥ {{price}}</view>  
     </view>
-  </navigator>
+
+    <!-- <view>{{classid}}</view> -->
+    <!-- <view>{{innerid}}</view> -->
+   
+    
+
+
+    <!-- <view>{{diamondInfo.append}}</view> -->
+    <!-- <view>{{diamondInfo.appendTime}}</view> -->
+
 
 
 </view>
+
+  
+       
+  
 <view class="address-box">
 
-
-        <button class="address-manage" bindtap="hello" open-type ="share">分享❤️</button>
+  <view class="address-manage">
+      <view>💎钻链独有ID {{classid}}-{{innerid}}</view>
+                      
+  </view>
+  <view class="address-manage">
+      <view>💎细节 {{description}}</view>
+                      
+  </view>
+  <view class="address-manage">
+      <view>💎镌刻时间 {{time}}</view>
+                      
+  </view>
+      <view class="address-manage">
         
-        
-
+        <navigator  url="/pages/diamonds_plus/diamonds_plus" hover-class="none">点击加刻💎</navigator>      
+    </view>
+        <button class="address-manage" bindtap="hello" open-type ="share" data-content='{{content}}' >点击分享❤️</button>
     <button class="address-manage">
-        
-        <navigator  url="/pages/diamonds/diamonds"  hover-class="none">转赠🎁</navigator>
+        <navigator  url="/pages/diamonds/diamonds"  hover-class="none">点击转赠🎁</navigator>
         
     </button>
-
-    <view class="address-manage">
-        
-        <navigator  url="/pages/diamonds_plus/diamonds_plus" hover-class="none">加刻💎</navigator>
-        
-    </view>
-
 </view>

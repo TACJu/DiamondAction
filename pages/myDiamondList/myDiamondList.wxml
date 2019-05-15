@@ -1,0 +1,19 @@
+<!--pages/myDiamondList/myDiamondList.wxml-->
+<!--pages/myDiamondList/myDiamondList.wxml-->
+
+
+  <view class='myDiamondList'>
+
+    <view class='myDiamond' wx:for='{{myDiamond}}' data-diamondinfo='{{item}}'  bindtap='goToSubpage' >
+      <!-- <image class='goods-picture' src='{{item.photoPath}}.jpg'></image> -->
+        <!-- <view style="height:25rpx;background: #eee;width:100%;"></view> -->
+       
+            <view class="address-box">
+        <view class="address-manage">
+             <text>💎 {{item.content}}</text>
+            
+        </view>
+    </view>
+        
+    </view>
+  </view>
