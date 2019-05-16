@@ -35,10 +35,18 @@
   </view>
 
   <view class='catagory'>
-      <text class='new' bindtap='goToNew'>时事</text>
+    <!-- <image src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Icon/%E6%97%B6%E4%BA%8B.png?sign=7a95020f9e6072b6d92f7b728e2379ba&t=1557968750' class='new' bindtap='goToNew'></image>
+    <image src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Icon/%E5%BF%83%E6%84%8F.png?sign=808fbf85ce7dafbe4abc3b9ec333b395&t=1557968186' class='heart' bindtap='goToHeart'></image>
+    <image src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Icon/%E8%AF%97%E5%8F%A5.png?sign=62f4bfe8c63aac6b1b02ad7eaf4a440d&t=1557968200' class='poem' bindtap='goToPoem'></image>
+    <image src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Icon/%E5%B9%BD%E9%BB%98.png?sign=bec42e397de3a8dc94ccb04e3d09bf27&t=1557968213' class='humor' bindtap='goToHumor'></image> -->
+    <button class='new' bindtap='goToNew'>时事</button>
+    <button class='heart' bindtap='goToHeart'>心意</button>
+    <button class='poem' bindtap='goToPoem'>诗句</button>
+    <button class='humor' bindtap='goToHumor'>幽默</button>
+      <!-- <text class='new' bindtap='goToNew'>时事</text>
       <text class='heart' bindtap='goToHeart'>心意</text>
       <text class='poem' bindtap='goToPoem'>诗句</text>
-      <text class='humor' bindtap='goToHumor'>幽默</text>
+      <text class='humor' bindtap='goToHumor'>幽默</text> -->
   </view>
 
   <view class='goods-list'>

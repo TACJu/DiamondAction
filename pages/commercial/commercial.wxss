@@ -95,7 +95,7 @@ page{
   flex-direction: row;
 }
 
-.new{
+/* .new{
   background-color: black;
   color: white;
   margin-right: 120rpx;
@@ -120,6 +120,34 @@ page{
   background-color: black;
   color: white;
   font-size: 40rpx;
+} */
+
+.new{
+  color: white;
+  background-color: black;
+  width: 25%;
+  height: 100rpx;
+}
+
+.heart{
+  color: white;
+  background-color: black;
+  width: 25%;
+  height: 100rpx;
+}
+
+.poem{
+  color: white;
+  background-color: black;
+  width: 25%;
+  height: 100rpx;
+}
+
+.humor{
+  color: lightgray;
+  background-color: black;
+  width: 25%;
+  height: 100rpx;
 }
 
 .goods-list
