@@ -1,5 +1,6 @@
 const app = getApp()
 
+var util = require('../../utils/util.js')
 Page({
 
   /**
@@ -51,6 +52,17 @@ Page({
    * 获取商品信息，callback用于指定是否调用wx.stopPullDownRefresh()
    */
   getGoods(callback) {
+
+  },
+  goToTransfer(event){
+    let myurl = '/pages/display/toTransfer?classid=' + this.data.classid
+      + '&innerid=' + this.data.innerid + '&time=' + this.data.time
+      + '&description=' + this.data.description + '&content=' + this.data.content
+      + '&price=' + this.data.price + '&nickname=' + app.globalData.userInfo.nickName
+      + '&ownerid=' + app.globalData.openId
+    wx.navigateTo({
+      url: myurl,
+    })
 
   },
 

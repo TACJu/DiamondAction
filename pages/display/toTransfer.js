@@ -1,3 +1,5 @@
+const app = getApp()
+var util = require('../../utils/util.js')
 Page({
 
   /**
@@ -67,7 +69,7 @@ Page({
         "action": "executeContract",
         "contractID": "DiamondOperation",
         "operation": "transfer",
-        "arg": "{\"cid\":" + classid + ", \"iid\":\"" + innerid + "\", \"owner\":" + _this.data.ownerid + ", \"receiver\":\"" + app.globalData.openId  + ", \"time\":\"" + time + "\"}",
+        "arg": "{\"cid\":" + _this.data.classid + ", \"iid\":\"" + _this.data.innerid + "\", \"owner\":" + _this.data.ownerid + ", \"receiver\":\"" + app.globalData.openId  + ", \"time\":\"" + time + "\"}",
         "privKey": privKey
       },
 
