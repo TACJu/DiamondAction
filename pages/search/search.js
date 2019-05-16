@@ -23,7 +23,7 @@ Page({
   goToSearch(event) {
     var query = ''
     if (this.data.searchValue == '') {
-      query = '北京大学高富帅向东伟'
+      query = this.data.query
     }
     else {
       query = this.data.searchValue

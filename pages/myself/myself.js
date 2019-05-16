@@ -61,7 +61,7 @@ Page({
           "action": "executeContract",
           "contractID": "DiamondOperation",
           "operation": "publish",
-          "arg": "{\"num\":" + goodsData.goodsList[i].number + ", \"content\":\"" + goodsData.goodsList[i].name + "\", \"type\":\"" + goodsData.goodsList[i].type + "\", \"activity\":\"" + goodsData.goodsList[i].activity + "\", \"priceType\":\"linear\"," + "\"photoPath\":\"" + goodsData.goodsList[i].photopath + "\",\"photoPathAfter\":\"" + "https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Icon/%E6%88%91%E7%9A%84%E9%92%BB%E7%9F%B3.jpg?sign=4aec69040c37b04d59a7640d2f0f65d5&t=1557967627" + "\",\"description\":\"" + goodsData.goodsList[i].description +"\"}",
+          "arg": "{\"num\":" + goodsData.goodsList[i].number + ", \"content\":\"" + encodeURIComponent(goodsData.goodsList[i].name) + "\", \"type\":\"" + goodsData.goodsList[i].type + "\", \"activity\":\"" + goodsData.goodsList[i].activity + "\", \"priceType\":\"linear\"," + "\"photoPath\":\"" + goodsData.goodsList[i].photopath + "\",\"photoPathAfter\":\"" + "https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Icon/%E6%88%91%E7%9A%84%E9%92%BB%E7%9F%B3.jpg?sign=4aec69040c37b04d59a7640d2f0f65d5&t=1557967627" + "\",\"description\":\"" + encodeURIComponent(goodsData.goodsList[i].description) +"\"}",
           "privKey": privKey
         },
         dataType: "jsonp",

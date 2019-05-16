@@ -123,21 +123,21 @@ page{
 } */
 
 .new{
-  color: white;
+  color: lightgray;
   background-color: black;
   width: 25%;
   height: 100rpx;
 }
 
 .heart{
-  color: white;
+  color: lightgray;
   background-color: black;
   width: 25%;
   height: 100rpx;
 }
 
 .poem{
-  color: white;
+  color: lightgray;
   background-color: black;
   width: 25%;
   height: 100rpx;
