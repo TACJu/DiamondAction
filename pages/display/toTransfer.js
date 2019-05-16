@@ -81,7 +81,7 @@ Page({
             duration: 2000
           })
         }
-        _this.onLoad(_this.data.options)
+        //_this.onLoad(_this.data.options)
       }
     })
   },
