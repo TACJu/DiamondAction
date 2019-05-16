@@ -1,23 +1,10 @@
 <view style="height:10rpx;background: #eee;width:100%;"></view>
-<view class="diamonds-item">
-
-    <view class="list-title">
-      <view>{{content}}</view>
-      <view class="right">¥ {{price}}</view>  
-    </view>
-
-    <!-- <view>{{classid}}</view> -->
-    <!-- <view>{{innerid}}</view> -->
-   
     
-
-
-    <!-- <view>{{diamondInfo.append}}</view> -->
-    <!-- <view>{{diamondInfo.appendTime}}</view> -->
-
-
-
+<view class="list-title">
+  <text>💎{{content}}</text>
+      <!-- <view class="right">¥ {{price}}</view>   -->
 </view>
+
 
   
        
