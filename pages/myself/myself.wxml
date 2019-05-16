@@ -6,13 +6,13 @@
         <text class="about">关于我们</text>
     </view>
     <view style="height:25rpx;background: #eee;width:100%;"></view>
-    <view class="address-box">
+    <!-- <view class="address-box">
         <view class="address-manage">
             
             <navigator  url="/pages/history/history" hover-class="none">我的足迹👣</navigator>
             
         </view>
-    </view>
+    </view> -->
 
     <view class="address-box">
         <view class="address-manage">

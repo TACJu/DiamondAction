@@ -1,4 +1,8 @@
 /* pages/myDiamondList/myDiamondList.wxss */
+.bg{
+  width: 100%;
+  height: 400rpx;
+}
 
 .address-box{
     border-bottom: 20rpx solid #ededed;

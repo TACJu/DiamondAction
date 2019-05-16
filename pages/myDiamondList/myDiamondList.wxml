@@ -1,6 +1,7 @@
 <!--pages/myDiamondList/myDiamondList.wxml-->
 <!--pages/myDiamondList/myDiamondList.wxml-->
 
+<image class='bg' mode='scaleToFill' src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Icon/%E6%88%91%E7%9A%84%E9%92%BB%E7%9F%B3.jpg?sign=15998da8fe2a0540684b2a1308147391&t=1557973528'></image>
 
   <view class='myDiamondList'>
 
