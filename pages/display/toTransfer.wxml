@@ -23,6 +23,6 @@
       <view>💎获取时间 {{time}}</view>             
   </view>
   <button class="address-manage" bindtap='goToTransfer' >接受转赠🎁</button>
-  <navigator  url="/pages/commercial/commercial" hover-class="none">商城寻宝</navigator> 
+  <!-- <navigator  url="/pages/commercial/commercial" hover-class="none">商城寻宝</navigator>  -->
 
 </view>

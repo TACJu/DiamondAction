@@ -13,6 +13,7 @@ Page({
     description: "",
     content:"",
     price: "",
+    //myurl:""
   },
 
   /**
@@ -55,14 +56,18 @@ Page({
 
   },
   goToTransfer(event){
+    console.log(this.data)
     let myurl = '/pages/display/toTransfer?classid=' + this.data.classid
       + '&innerid=' + this.data.innerid + '&time=' + this.data.time
       + '&description=' + this.data.description + '&content=' + this.data.content
       + '&price=' + this.data.price + '&nickname=' + app.globalData.userInfo.nickName
       + '&ownerid=' + app.globalData.openId
+    
     wx.navigateTo({
       url: myurl,
     })
+    console.log("transfer myurl")
+    console.log(myurl)
 
   },
 

@@ -24,6 +24,8 @@ Page({
     myurl+='&time='+time
     myurl+='&description'+description
     */
+    console.log("diamondinfo")
+    console.log(options)
     this.setData({
       classid: options.classid,
       innerid: options.innerid,
@@ -33,8 +35,7 @@ Page({
       price: options.price,
       nickname: options.nickname,
     });
-    console.log("diamondinfo")
-    console.log(options)
+
     //console.log(diamondinfo)
   },
 

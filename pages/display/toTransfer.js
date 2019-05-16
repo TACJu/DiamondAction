@@ -26,6 +26,8 @@ Page({
     myurl+='&time='+time
     myurl+='&description'+description
     */
+    console.log("diamondinfo")
+    console.log(options)
     this.setData({
       classid: options.classid,
       innerid: options.innerid,
@@ -36,9 +38,6 @@ Page({
       nickname: options.nickname,
       ownerid: options.ownerid,
     });
-    console.log("diamondinfo")
-    console.log(options)
-    //console.log(diamondinfo)
   },
 
 
@@ -69,7 +68,7 @@ Page({
         "action": "executeContract",
         "contractID": "DiamondOperation",
         "operation": "transfer",
-        "arg": "{\"cid\":" + _this.data.classid + ", \"iid\":\"" + _this.data.innerid + "\", \"owner\":" + _this.data.ownerid + ", \"receiver\":\"" + app.globalData.openId  + ", \"time\":\"" + time + "\"}",
+        "arg": "{\"cid\":" + _this.data.classid + ", \"iid\":\"" + _this.data.innerid + "\", \"owner\":\"" + _this.data.ownerid + "\", \"receiver\":\"" + app.globalData.openId  + "\", \"time\":\"" + time + "\"}",
         "privKey": privKey
       },
 
