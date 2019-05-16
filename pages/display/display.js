@@ -52,4 +52,6 @@ Page({
   getGoods(callback) {
 
   },
+  //	//arg =  {"action":"transfer","arg":"{\"cid\": 1 , \"iid\": 1 , \"owner\": 1 , \"receiver\": 1 , \"time\":\"201904201114\"}"}
+  
 })

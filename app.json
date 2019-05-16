@@ -20,7 +20,8 @@
     "pages/dig/dig",
     "pages/term/term",
     "pages/myDiamondList/myDiamondList",
-    "pages/display/display"
+    "pages/display/display",
+    "pages/display/toTransfer"
   ],
   "window": {
     "backgroundTextStyle": "light",
