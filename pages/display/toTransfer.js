@@ -76,7 +76,7 @@ Page({
       success: function (res) {
         if (res.data) {
           wx.showToast({
-            title: '购买成功',
+            title: '转赠成功',
             icon: 'success',
             duration: 2000
           })

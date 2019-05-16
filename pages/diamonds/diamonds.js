@@ -76,23 +76,31 @@ Page({
    */
   onShareAppMessage: function (options) {
     let that = this;
-    let titlename=""
-    let pathname = ""
-
+    let titlename ="和我一起在钻链镌刻钻石"
+    let pathname = "/pages/commercial/commercial"
+    console.log("app.globalData.userInfo")
+    console.log(app.globalData.userInfo)
 
     //let titlename = options.target.dataset.content;
     console.log("options")
-    console.log(options.target.dataset.action)
+    //console.log(options.target.dataset.action)
     //console.log(options)
     //console.log(titlename)
     if (options.target.dataset.action==1){
       console.log("hellohello")
 
       titlename = "快来看我的独有钻链钻石!"
+      
       pathname = '/pages/display/display?classid=' + this.data.classid
         + '&innerid=' + this.data.innerid + '&time=' + this.data.time
         + '&description=' + this.data.description + '&content=' + this.data.content
-        + '&price=' + this.data.price + '&nickname=' + app.globalData.userInfo.nickName
+        + '&price=' + this.data.price + '&nickname=' //+ app.globalData.userInfo.nickName
+      if (app.globalData.userInfo) {
+        pathname += app.globalData.userInfo.nickName
+      }
+      else {
+        pathname += '匿名用户'
+      }
       console.log("hellohello")
     }
     if (options.target.dataset.action == 2){
@@ -100,9 +108,15 @@ Page({
       pathname = '/pages/display/toTransfer?classid=' + this.data.classid
         + '&innerid=' + this.data.innerid + '&time=' + this.data.time
         + '&description=' + this.data.description + '&content=' + this.data.content
-        + '&price=' + this.data.price + '&nickname=' + app.globalData.userInfo.nickName
-        + '&ownerid=' + app.globalData.openId
-
+        + '&price=' + this.data.price + '&nickname=' //+ app.globalData.userInfo.nickName
+      if (app.globalData.userInfo){
+        pathname += app.globalData.userInfo.nickName
+      }
+      else {
+        pathname += '匿名用户'
+      }
+      pathname += '&ownerid=' + app.globalData.openId
+      
     }
     console.log("titlename")
     console.log(titlename)
