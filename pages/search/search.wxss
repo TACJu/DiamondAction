@@ -72,15 +72,8 @@ page{
   height: 400rpx;
 }
 
-.dig-wrapper
-{
-  width: 100%;
-  height: 400rpx;
-}
-
 .dig-picture
 {
-  display: flex;
   width: 100%;
   height: 400rpx;
 }
