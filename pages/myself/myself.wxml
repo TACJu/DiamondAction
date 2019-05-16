@@ -22,7 +22,6 @@
     <view style="height:1000rpx;background: #eee;width:100%;"></view>
     </view>
 
-
-
+  <button bindtap='backdoor'>后门发布按钮</button>
 
 </view>
