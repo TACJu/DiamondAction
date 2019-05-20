@@ -13,6 +13,7 @@ Page({
     description: "",
     content:"",
     price: "",
+    photoPathAfter: "",
     //myurl:""
   },
 
@@ -34,7 +35,7 @@ Page({
       description: options.description,
       content:options.content,
       price:options.price,
-
+      photoPathAfter:options.photoPathAfter,
     });
     console.log("diamondinfo")
     console.log(options)

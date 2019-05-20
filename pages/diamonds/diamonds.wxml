@@ -1,5 +1,7 @@
 <view style="height:10rpx;background: #eee;width:100%;"></view>
-    
+
+<image class="pic" src='{{photoPathAfter}}'></image>
+
 <view class="list-title">
   <text>💎{{content}}</text>
       <!-- <view class="right">¥ {{price}}</view>   -->

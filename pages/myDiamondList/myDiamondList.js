@@ -18,13 +18,15 @@ Page({
     let content = event.currentTarget.dataset.diamondinfo.content
     let price = event.currentTarget.dataset.diamondinfo.price
     let description = event.currentTarget.dataset.diamondinfo.description
+    let photoPathAfter = event.currentTarget.dataset.diamondinfo.photoPathAfter
     console.log(typeof classid)
     myurl = '/pages/diamonds/diamonds?classid=' + classid
-    myurl+='&innerid='+innerid
-    myurl+='&time='+time
+    myurl+='&innerid='+ innerid
+    myurl+='&time='+ time
     myurl+='&description='+description
     myurl += '&content=' + content
     myurl += '&price=' + price
+    myurl += '&photoPathAfter=' + photoPathAfter 
     console.log("mydiamondinfo")
     console.log(myurl)
     console.log(event.currentTarget.dataset.diamondinfo)

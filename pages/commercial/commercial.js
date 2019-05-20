@@ -5,26 +5,12 @@ var activityData = require('../../data/activity.js')
 
 Page({
 
-  bindGetUserInfo(e) {
-    console.log('1')
-    console.log(app.globalData.userInfo)
-    console.log('2')
-    console.log(e.detail.userInfo)
-    wx.getUserInfo({
-      success: function (res) {
-        console.log(res);
-      }
-    })
-    console.log('3')
-    console.log(app.globalData.userInfo)
-    // app.globalData.userInfo = e.datail.userInfo
-    this.onLoad()
-  },
-
   /**
    * 页面的初始数据
    */
   data: {
+    systemInfo: [],
+    toView: '',
     merchandise: [],
     activity_bg: [],
     centent_Show: true,
@@ -45,8 +31,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad() {
-    console.log('0')
-    console.log(app.globalData.userInfo)
+    var _this = this
+    wx.getSystemInfo({
+      success: function(res) {
+        console.log(res)
+        _this.setData({
+          systemInfo: res
+        })
+      },
+    })
     this.getData()
   },
 
@@ -115,28 +108,11 @@ Page({
     })
   },
 
-  goToNew(event)
+  goToType(event)
   {
-    wx.navigateTo({
-      url: '/pages/type/new/new',
-    })
-  },
-
-  goToHeart(event) {
-    wx.navigateTo({
-      url: '/pages/type/heart/heart',
-    })
-  },
-
-  goToPoem(event) {
-    wx.navigateTo({
-      url: '/pages/type/poem/poem',
-    })
-  },
-
-  goToHumor(event) {
-    wx.navigateTo({
-      url: '/pages/type/humor/humor',
+    var hash = event.target.dataset.hash
+    this.setData({
+      toView: hash
     })
   },
 

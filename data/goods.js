@@ -1,7 +1,7 @@
 var goodsJson = [
   {
     "id": 0,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E6%9C%89%E9%92%B1-%E9%81%93%E8%B7%AF-%E8%B4%AB%E7%A9%B7_02.jpg?sign=84175aa5a9fe22746bcd36618efaa12b&t=1557232644',
+    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E6%97%B6%E4%BA%8B_01.jpg?sign=9b77ffac2635bbd966edfb1a34c41538&t=1558359005',
     "name": '道路千万条，安全第一条',
     "type": 'new',
     "activity": 'liulangdiqiu',
@@ -11,7 +11,7 @@ var goodsJson = [
   },
   {
     "id": 1,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E9%80%89%E8%AF%BE-%E4%B8%A4%E5%BC%80%E8%8A%B1-%E7%9C%9F%E5%A5%BD_01.jpg?sign=fe0036134b3857b8127127752d46cce4&t=1557232740',
+    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E5%B9%BD%E9%BB%98_02.jpg?sign=f782bccfbd8fcbb9488db022e5c341a4&t=1558359170',
     "name": '选课一时爽，期末火葬场',
     "type": 'humor',
     "activity": 'free',
@@ -21,7 +21,7 @@ var goodsJson = [
   },
   {
     "id": 2,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E6%9C%89%E9%92%B1-%E9%81%93%E8%B7%AF-%E8%B4%AB%E7%A9%B7_01.jpg?sign=46a726ab027b51bfe5110d3496f325ee&t=1557232860',
+    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E5%B9%BD%E9%BB%98_01.jpg?sign=742ed1a8db52208d2d344b0ff9c41b7e&t=1558359188',
     "name": '我，有钱',
     "type": 'humor',
     "activity": 'free',
@@ -31,7 +31,7 @@ var goodsJson = [
   },
   {
     "id": 3,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E9%80%89%E8%AF%BE-%E4%B8%A4%E5%BC%80%E8%8A%B1-%E7%9C%9F%E5%A5%BD_02.jpg?sign=6c70014b329d23428c6cf2770c5f70b2&t=1557232783',
+    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E5%B9%BD%E9%BB%98_05.jpg?sign=5b785dbad3716c7fb082d52f52d9fac7&t=1558359211',
     "name": '两开花，两开花',
     "type": 'humor',
     "activity": 'free',
@@ -41,9 +41,9 @@ var goodsJson = [
   },
   {
     "id": 4,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E9%80%89%E8%AF%BE-%E4%B8%A4%E5%BC%80%E8%8A%B1-%E7%9C%9F%E5%A5%BD_03.jpg?sign=b6b2580aa7a9f42c681d905c9b95d0da&t=1557232903',
+    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/other_01.jpg?sign=02c4aa52cf65c29bef03a47d4318188d&t=1558359230',
     "name": '真好，真棒',
-    "type": 'heart',
+    "type": 'other',
     "activity": 'free',
     "price": 1,
     "number": 100000,
@@ -51,9 +51,9 @@ var goodsJson = [
   },
   {
     "id": 5,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E5%AD%A4%E5%8D%95%E6%98%AF%E4%B8%80%E7%A7%8D%E7%97%85-time-is-money_01.jpg?sign=5156105c6932b880cfe5a88725e66e7b&t=1557233068',
+    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/other_02.jpg?sign=c7fa0255d3cee518863ecc7da5658307&t=1558359284',
     "name": 'Time is money',
-    "type": 'heart',
+    "type": 'other',
     "activity": 'free',
     "price": 9.9,
     "number": 1000,
@@ -61,7 +61,7 @@ var goodsJson = [
   },
   {
     "id": 6,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E6%9C%89%E9%92%B1-%E9%81%93%E8%B7%AF-%E8%B4%AB%E7%A9%B7_03.jpg?sign=80094703ad57963e4cf0aede3458eeec&t=1557233118',
+    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E5%B9%BD%E9%BB%98_04.jpg?sign=ce94193f80c0e7be7787995df3a5e87d&t=1558359312',
     "name": '贫穷限制了我的想象力',
     "type": 'humor',
     "activity": 'free',
@@ -71,7 +71,7 @@ var goodsJson = [
   },
   {
     "id": 7,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E5%8D%83%E9%87%91%E9%9A%BE%E4%B9%B0%E7%88%B7%E4%B9%90%E6%84%8F.jpg?sign=0c82edd5e2ae7f9daff2285c400d88e9&t=1557235599',
+    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E5%B9%BD%E9%BB%98_03.jpg?sign=f1fae003f5cce0ae20f2802e73467426&t=1558359357',
     "name": '千金难买爷乐意',
     "type": 'humor',
     "activity": 'free',
@@ -81,9 +81,9 @@ var goodsJson = [
   },
   {
     "id": 8,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E5%AD%A4%E5%8D%95%E6%98%AF%E4%B8%80%E7%A7%8D%E7%97%85-time-is-money_02.jpg?sign=a77f78d0e0d9438308a4b1768cb567ae&t=1557233192',
+    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E5%BF%83%E6%84%8F_03.jpg?sign=cd6924c5b2bb21abdfc15cc2337590a9&t=1558359375',
     "name": '孤单是一种病',
-    "type": 'humor',
+    "type": 'heart',
     "activity": 'free',
     "price": 1.1,
     "number": 11111,
@@ -91,7 +91,7 @@ var goodsJson = [
   },
   {
     "id": 9,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E6%88%91%E7%88%B1%E4%BD%A0-%E8%B5%A0%E6%B1%AA%E4%BC%A6_02.jpg?sign=c2624f0185a86d5bad120539c8b60965&t=1557233217',
+    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E5%BF%83%E6%84%8F_02.jpg?sign=88642b459a35fa9e9fc1230d59fb5b88&t=1558359418',
     "name": '我爱你——钻链珍藏版',
     "type": 'heart',
     "activity": 'free',
@@ -101,9 +101,9 @@ var goodsJson = [
   },
   {
     "id": 10,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/_%E7%BA%AA%E5%BF%B5%E6%97%A5-%E6%8A%BD%E5%88%80-%E5%8A%9F%E4%B8%8E%E5%90%8D_02.jpg?sign=802a885853d83c5c1fa9647f53ffada7&t=1557233252',
+    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E5%BF%83%E6%84%8F_01.jpg?sign=d741eee2bd8418148d8c11a3cac5e01e&t=1558359436',
     "name": '纪念日！！！！！',
-    "type": 'poem',
+    "type": 'heart',
     "activity": 'free',
     "price": 9.9,
     "number": 10000,
@@ -111,7 +111,7 @@ var goodsJson = [
   },
   {
     "id": 11,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/_%E7%BA%AA%E5%BF%B5%E6%97%A5-%E6%8A%BD%E5%88%80-%E5%8A%9F%E4%B8%8E%E5%90%8D_01.jpg?sign=6b9916c9dd3ad3ba7d2c06cc9217736e&t=1557234708',
+    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E8%AF%97%E5%8F%A5_01.jpg?sign=567e5d4a2a3001d335e1cc6a541d9135&t=1558359463',
     "name": '抽刀断水水更流，举杯消愁愁更愁。',
     "type": 'poem',
     "activity": 'libai',
@@ -121,7 +121,7 @@ var goodsJson = [
   },
   {
     "id": 12,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/_%E7%BA%AA%E5%BF%B5%E6%97%A5-%E6%8A%BD%E5%88%80-%E5%8A%9F%E4%B8%8E%E5%90%8D_03.jpg?sign=7ff508c57a1da7306de2f0a6435a6725&t=1557234754',
+    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E8%AF%97%E5%8F%A5_02.jpg?sign=c2451e583376f87f7ee20a0eb89ca8be&t=1558359489',
     "name": '事了拂衣去，深藏功与名。',
     "type": 'poem',
     "activity": 'libai',
@@ -131,43 +131,13 @@ var goodsJson = [
   },
   {
     "id": 13,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E6%88%91%E7%88%B1%E4%BD%A0-%E8%B5%A0%E6%B1%AA%E4%BC%A6_03.jpg?sign=aae202afa617c915187e7ff383c7dbe2&t=1557234813',
+    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E8%AF%97%E5%8F%A5_03.jpg?sign=e0d167557107484179936fef5c705b82&t=1558359501',
     "name": '桃花潭水深千尺，不及汪伦送我情。',
     "type": 'poem',
     "activity": 'libai',
     "price": 99.0,
     "number": 10,
     "description": '诗仙李白专题钻石'
-  },
-  {
-    "id": 14,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E5%8C%97%E5%A4%A71_01.jpg?sign=f34e89160d51d29cd24d4263fcba133d&t=1557234973',
-    "name": '北京大学121周年校庆',
-    "type": 'new',
-    "activity": 'xiaoqing',
-    "price": 5.4,
-    "number": 54,
-    "description": '北大校庆专属事件钻石'
-  },
-  {
-    "id": 15,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E5%8C%97%E5%A4%A7233_02.jpg?sign=0ecd518957f616110d1876989a609c4d&t=1557234912',
-    "name": '祝北大生日快乐！',
-    "type": 'new',
-    "activity": 'xiaoqing',
-    "price": 5.4,
-    "number": 20000,
-    "description": '北大校庆专属事件钻石'
-  },
-  {
-    "id": 16,
-    "photopath": 'https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Diamond/%E5%8C%97%E5%A4%A7233_01.jpg?sign=9fe9de7e2c52c7ae23ea31115fc30e91&t=1557235022',
-    "name": '数字钻石北大红限定版',
-    "type": 'new',
-    "activity": 'xiaoqing',
-    "price": 5.4,
-    "number": 54,
-    "description": '北大校庆专属事件钻石'
   },
 ]
 
