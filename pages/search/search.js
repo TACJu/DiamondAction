@@ -1,5 +1,6 @@
 const app = getApp()
-
+// { "action": "onExecuteResult", "data": "{\"status\":\"Success\",\"result\":\"[]\"}", "executeTime": 51 }
+// { "action": "onExecuteResult", "data": "{\"status\":\"Success\",\"result\":\"[false]\"}", "executeTime": 55 }
 Page({
 
   /**
@@ -10,6 +11,7 @@ Page({
     searchValue: '',
     searchcid: [],
     merchandise: [],
+    mined: false,
     flag: false
   },
 
@@ -42,8 +44,9 @@ Page({
 
   goToDig(event) {
     var query = this.data.query
+    var mined = this.data.mined
     wx.navigateTo({
-      url: '/pages/dig/dig?query=' + query,
+      url: '/pages/dig/dig?query=' + query + '&mined=' + mined, 
     })
   },
 
@@ -70,9 +73,10 @@ Page({
         if (res.data) {
           console.log(res.data)
           _this.setData({
-            searchcid: JSON.parse((JSON.parse(JSON.parse(res.data).data)).result)
+            searchcid: JSON.parse((JSON.parse(JSON.parse(res.data).data)).result),
+            mined: JSON.parse((JSON.parse(JSON.parse(res.data).data)).result).pop()
           })
-          for (var i = 0; i < _this.data.searchcid.length; i++)
+          for (var i = 0; i < _this.data.searchcid.length - 1; i++)
           {
             if (_this.data.searchcid[i].sim == 1)
             {

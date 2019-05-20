@@ -5,9 +5,21 @@ var activityData = require('../../data/activity.js')
 
 Page({
 
-  userInfo: {},
-  hasUserInfo: false,
-  canIUse: wx.canIUse('button.open-type.getUserInfo'),
+  bindGetUserInfo(e) {
+    console.log('1')
+    console.log(app.globalData.userInfo)
+    console.log('2')
+    console.log(e.detail.userInfo)
+    wx.getUserInfo({
+      success: function (res) {
+        console.log(res);
+      }
+    })
+    console.log('3')
+    console.log(app.globalData.userInfo)
+    // app.globalData.userInfo = e.datail.userInfo
+    this.onLoad()
+  },
 
   /**
    * 页面的初始数据
@@ -17,6 +29,9 @@ Page({
     activity_bg: [],
     centent_Show: true,
     searchValue: '',
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
   },
 
   searchValueInput: function (e) {
@@ -30,6 +45,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad() {
+    console.log('0')
+    console.log(app.globalData.userInfo)
     this.getData()
   },
 

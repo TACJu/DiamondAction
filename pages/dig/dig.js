@@ -1,5 +1,7 @@
 const app = getApp()
 var util = require('../../utils/util.js')
+var wxCharts = require('../../data/wxcharts.js')
+var lineChart = null
 
 Page({
 
@@ -8,9 +10,28 @@ Page({
    */
   data: {
     query: '',
+    mined: false,
     items: [
       { name: 'provision', value: '我已阅读并同意', checked: false},
-    ]
+    ],
+    clicked: false
+  },
+
+  touchHandler: function (e) {
+    lineChart.scrollStart(e);
+  },
+
+  moveHandler: function (e) {
+    lineChart.scroll(e);
+  },
+
+  touchEndHandler: function (e) {
+    lineChart.scrollEnd(e);
+    lineChart.showToolTip(e, {
+      format: function (item, category) {
+        return category + '号 ' + item.name + ':' + item.data + '元'
+      }
+    });
   },
 
   checkChange(e) {
@@ -30,6 +51,12 @@ Page({
 
   goToDig() {
     var _this = this
+    if (_this.data.items[0].checked == true || _this.data.mined == true)
+    {
+      _this.setData({
+        clicked: true
+      })
+    }
     var time = util.formatTime(new Date())
     var privKey = "YmYyYjc3MWZmNzExMGFlMmE4NDhlYzVlN2YxYTZjNWQ0MDM4YjVhMTcyMmI4NWJhMjU1MWM2NTQ3Y2U4ZGYyNmFiNzdlZjQ1ZGU1ZjJiNGE2NWNkZjhmN2UyMzJiODg4OGYwMDBjYWZhMDkyOGU3ZWZhMWI4NDU5NDg3ZDQxMDk0ODIyNjk2ZGMyNzI2ODFiMmRiMTA3YzMxYzBlMDA2N2NkNDFjOWM3NDg1MGZlNjcyZDYxMzA0Y2M0MGQzNTJlNzMwMGU2YjJiMmJhZGY5OGJkZWEyZjEzNmI0YTc2MWE4NDE0NDBlMWViZGYwNGQyYWJhMzE5Y2RkNjEzOGM2ZmRiNDdlMDc5NzdmYTIxZDc5Y2ZiZDk0MGQxOWNlNjAzNjM1ZGQ2YmI4ZGVlZDkxZjk4NzE3YTI4NGVkMzQyMTA4Yzg2MjgwMmZiMTZiMTUyYjUwYjliNWU2NzM4YzhjMDYyMDJmZDI3NmUwOWI0MTFjMDc2NTBjZGI2ZGMxYWFkNDQ4MTg5N2IxMWY5MTU4MGI3NzY1OWIxYzczOWU4ZGQ2ZWNhNDViMGNkY2Q2MGRhZWI1OWNiNjM3NzEzOGNlMWY4YTA3NzI0NmIyMWJjNjIzYTNmNGMzYTg2OTNlMDE5NjA5YzUxYWI3YTdhYTdlZmRkYTAxY2Q4ZDdhMWM5ODksMTAwMDEsYjdhYzU0NDUzMzA1N2RkNmVkZTczYWFiNDQyNWE4MGUyNDYxMTgyOWE4ZGYyNjFhMDYzNzNlN2RmODkxNjlhZGU2YmI1MWZhNjg0MDNhMDBiZTM1OWFjYWQ3ZGFmMWFmY2FlZDNhNDMxN2RkMTdlOWU5ZjViYzQwNjg0NDY3ZDMzYTJhNGRlZjc2MGVhM2Y1ZDBmZGIxM2U4NWRhZjIwYWM5OGMzNzA5MzA3MzE5MmIxYWNmYjEyZjYwODI2YzIxNTdiZjdhZTgyMDhmMjliYmMwNjQ5YjljNjVjZTYyMTBmMWViZGZiNmYxMDAxMmNiMzJiYjdmNTQ2NDI1ZGUxYzA0NzQ2NzM2ZWU4MzhkYzU0YTc2ZTQ2ZWE1M2MyZTJkNGZmNWZmN2M1YWJiMWJmOGYzMTVlZjk5OGZkOGQ5YzMzMDFhYzhhYjk4MDMxMzgyMThjNGY3MDUyMWJmZDg4ZDk0OTcxMWEzYTc3OWIwZGYxNmRkZTI4Y2NlYWI5YWMwZmQyZjdkYWEwZDUzYzhjMThiZjk0NmEzNjljZjk2MmM1YzhmYzhlMWQ3MDU3OGU4N2Q2MDNlYzlhYjYwZTFiYTg1Nzg3Zjk5MzU2ZGEwMDVkZGVmNjQxMzU0Mjg2NGNiODhhMzE3OTI0YWZkMjNkZDdmOWYzYmQwYTgwNDMxNzE=";
     if (_this.data.items[0].checked == false)
@@ -73,6 +100,51 @@ Page({
   onLoad: function (options) {
     this.setData({
       query: options.query,
+      mined: options.mined
+    })
+    if (this.data.mined == 'false')
+    {
+      this.setData({
+        mined: false
+      })
+    }
+    else
+    {
+      this.setData({
+        mined: true
+      })
+    }
+    var price = new Array(20).fill(0);
+    var catagory = new Array(20).fill(0)
+    for (var i = 0; i < 20; i++) {
+      price[i] = i + 0.99;
+    }
+    for (var i = 0; i < 20; i++) {
+      catagory[i] = i + 1;
+    }
+
+
+    lineChart = new wxCharts({
+      canvasId: 'lineGraph',
+      type: 'line',
+      categories: catagory,
+      series: [{
+        name: '',
+        data: price
+      }],
+      yAxis: {
+        title: '价格',
+        min: 0
+      },
+      width: 400,
+      height: 200,
+      dataLabel: true,
+      legend: false,
+      dataPointShape: true,
+      enableScroll: true,
+      extra: {
+        lineStyle: 'curve'
+      }
     })
   },
 

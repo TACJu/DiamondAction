@@ -1,20 +1,41 @@
 <image class='dig-picture' src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Icon/%E6%8C%96%E6%8E%98%E9%A1%B5%E9%9D%A2%E9%92%BB%E7%9F%B3.jpg?sign=d7b452ef01927b9ba49c3c3e32bc01ec&t=1557966437' mode='scaleToFill' type='default'></image>
 
-<text> 
-想要成为“{{query}}”这颗尚未面世钻石的发掘者并拥有它吗？请先阅读并同意以下条款。
-</text>
-
-<text>
-若挖钻成功，钻石挖掘者将以最低价0.99元获得一颗此钻石。用户需自行承担因违反条款而导致的挖钻失败。
-</text>
-
-<view class="checkbox" wx:for="{{items}}">
-  <checkbox class="check" bindtap="checkChange" value="{{item.name}}" checked="{{item.checked}}" />
-  {{item.value}}
-  <text class="term" bindtap='goToTerm'>
-    《用户挖钻条款》
+<view class='mine' wx:if='{{mined == false}}'>
+  <text> 
+  您是第一个发现“{{query}}”这颗钻石的幸运儿，想要成为它的发掘者并拥有它吗？作为挖掘者，您将享有以下权益。
   </text>
+
+  <text>
+  1、若挖钻成功，您将以最低价0.99元获得一颗此钻石
+
+  2、您将获得该钻石后续销售收入的一半。该钻石预估后续价格曲线如下图
+  </text>
+
+  <canvas class="canvas" canvas-id="lineGraph{{item.id}}" disable-scroll="true" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler">
+  </canvas>
+
+  <text>
+  在您挖钻之前，请先阅读并同意以下条款。您需自行承担因违反条款而导致的挖钻失败。
+  </text>
+
+  <view class="checkbox" wx:for="{{items}}">
+    <checkbox class="check" bindtap="checkChange" value="{{item.name}}" checked="{{item.checked}}" />
+    {{item.value}}
+    <text class="term" bindtap='goToTerm'>
+      《用户挖钻条款》
+    </text>
+  </view>
+
+  <button class='dig' disabled='{{clicked}}' type='default' bindtap='goToDig'>挖掘</button>
 </view>
 
+<view class='book' wx:if='{{mined == true}}'>
+  <text> 
+  您发现了一颗正在被挖掘的钻石，若您选择现在预定，将能够以最低价0.99元获得一颗此钻石，我们预计这颗钻石的后续价格曲线如下图
+  </text>
 
-<button class='dig' type='default' bindtap='goToDig'>挖掘</button>
+  <canvas class="canvas" canvas-id="lineGraph{{item.id}}" disable-scroll="true" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler">
+  </canvas>
+
+  <button class='dig' disabled='{{clicked}}' type='default' bindtap='goToDig'>预约</button>
+</view>
