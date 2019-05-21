@@ -10,6 +10,16 @@ page{
   flex-direction: column;
 }
 
+.show-author
+{
+  background-color: black;
+  border: 1px solid lightgray;
+}
+
+.get-userinfo{
+  color: lightgray;
+}
+
 .search-content {
   padding-top: 10rpx;
   display: flex;

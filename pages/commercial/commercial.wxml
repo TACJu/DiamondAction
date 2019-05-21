@@ -1,7 +1,8 @@
 <scroll-view class='bg' style='height:{{systemInfo.windowHeight}}px; width:100%;' scroll-y='true' scroll-into-view="{{toView}}">
   <block wx:if="{{!hasUserInfo && canIUse}}" class='show-author'>
     <button open-type="getUserInfo" class='show-author' bindgetuserinfo="getUserInfo">
-      <view class='get-userinfo'>第一次登陆请进行授权，否则将影响部分功能使用</view>
+      <view class='get-userinfo'>为了您的用户体验，请点击授权用户信息</view>
+      <view class='get-userinfo'>非敏感信息，仅用于小程序正常使用</view>
     </button>
   </block>
   <view class='search-content'>

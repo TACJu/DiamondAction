@@ -35,7 +35,7 @@ Page({
           "action": "executeContract",
           "contractID": "DiamondOperation",
           "operation": "publish",
-          "arg": "{\"num\":" + goodsData.goodsList[i].number + ", \"content\":\"" + encodeURIComponent(goodsData.goodsList[i].name) + "\", \"type\":\"" + goodsData.goodsList[i].type + "\", \"activity\":\"" + goodsData.goodsList[i].activity + "\", \"priceType\":\"linear\"," + "\"photoPath\":\"" + goodsData.goodsList[i].photopath + "\",\"photoPathAfter\":\"" + "https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Icon/hello.jpg?sign=962697fdbf63636aad12c2ced450b9db&t=1558368470" + "\",\"description\":\"" + encodeURIComponent(goodsData.goodsList[i].description) +"\"}",
+          "arg": "{\"num\":" + goodsData.goodsList[i].number + ", \"content\":\"" + encodeURIComponent(goodsData.goodsList[i].name) + "\", \"type\":\"" + goodsData.goodsList[i].type + "\", \"activity\":\"" + goodsData.goodsList[i].activity + "\", \"priceType\":\"" + goodsData.goodsList[i].priceType + "\", \"beginPrice\":" + goodsData.goodsList[i].beginPrice + ", \"priceParam\":" + goodsData.goodsList[i].priceParam + ", \"photoPath\":\"" + goodsData.goodsList[i].photopath + "\",\"photoPathAfter\":\"" + "https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Icon/hello.jpg?sign=962697fdbf63636aad12c2ced450b9db&t=1558368470" + "\",\"description\":\"" + encodeURIComponent(goodsData.goodsList[i].description) +"\"}",
           "privKey": privKey
         },
         dataType: "jsonp",

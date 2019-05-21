@@ -90,15 +90,15 @@ Page({
         if (res.data) {
           _this.setData({
             tmpcnt: JSON.parse((JSON.parse(JSON.parse(res.data).data)).result),
-            price: JSON.parse((JSON.parse(JSON.parse(res.data).data)).result) - 0.01
+            price: _this.data.merchandise.beginPrice + _this.data.merchandise.priceParam * (JSON.parse((JSON.parse(JSON.parse(res.data).data)).result) - 1)
           })
           _this.data.merchandise.cnt = _this.data.tmpcnt
-          _this.data.merchandise.price = _this.data.merchandise.cnt - 0.01
+          _this.data.merchandise.price = _this.data.price
 
           var price = new Array(20).fill(0);
           var catagory = new Array(20).fill(0)
           for (var i = 0; i < 20; i++) {
-            price[i] = _this.data.merchandise.cnt + i - 0.01;
+            price[i] = (_this.data.merchandise.price + _this.data.merchandise.priceParam * i).toPrecision(3);
           }
           for (var i = 0; i < 20; i++) {
             catagory[i] = _this.data.merchandise.cnt + i;

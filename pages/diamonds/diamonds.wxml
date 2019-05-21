@@ -18,17 +18,17 @@
                       
   </view>
   <view class="address-manage">
-      <view>💎细节 {{description}}</view>
+      <text>💎细节 {{description}}</text>
                       
   </view>
   <view class="address-manage">
       <view>💎镌刻时间 {{time}}</view>
                       
   </view>
-      <view class="address-manage">
+      <!-- <view class="address-manage">
         
         <navigator  url="/pages/diamonds_plus/diamonds_plus" hover-class="none">点击加刻💎</navigator>      
-    </view>
+    </view> -->
         <button class="address-manage" open-type ="share" data-action='1' data-content='{{content}}' >点击分享❤️</button>
         <button class="address-manage" open-type ="share" data-action='2' data-content='{{content}}' >点击转赠🎁</button>
         <!-- <view class="address-manage"  bindtap='goToTransfer' >点击转赠🎁</view> -->
