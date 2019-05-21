@@ -98,7 +98,7 @@ Page({
           var price = new Array(20).fill(0);
           var catagory = new Array(20).fill(0)
           for (var i = 0; i < 20; i++) {
-            price[i] = (_this.data.merchandise.price + _this.data.merchandise.priceParam * i).toPrecision(3);
+            price[i] = (_this.data.merchandise.price + _this.data.merchandise.priceParam * i).toFixed(2);
           }
           for (var i = 0; i < 20; i++) {
             catagory[i] = _this.data.merchandise.cnt + i;
@@ -107,15 +107,16 @@ Page({
 
           lineChart = new wxCharts({
             canvasId: 'lineGraph',
+            background: '#F5F5F5',
             type: 'line',
             categories: catagory,
             series: [{
               name: '',
-              data: price
+              data: price,
             }],
             yAxis: {
               title: '价格',
-              min: 0
+              min: 0,
             },
             width: 400,
             height: 200,
@@ -124,7 +125,7 @@ Page({
             dataPointShape: true,
             enableScroll: true,
             extra: {
-              lineStyle: 'curve'
+              lineStyle: 'curve',
             }
           })
         }

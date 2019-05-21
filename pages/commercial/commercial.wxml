@@ -14,7 +14,7 @@
         bindconfirm='goToSearch'
         type='text'
         value="{{searchValue}}"
-        placeholder="北京大学高富帅向东伟"/>
+        placeholder="一句誓言，一颗永恒"/>
       </view>
     </view>
     <view
@@ -52,27 +52,27 @@
 
     <image class='new-in' src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Type/%E6%97%B6%E4%BA%8B.jpg?sign=41def2481cd3f5a248074f1920735704&t=1558359939' id='hash1'></image>
     <view class='goods-item' wx:for='{{merchandise}}' wx:if='{{item.type == "new"}}' data-id='{{item.cid}}' bindtap='goToSubpage'>
-      <image class='goods-picture' src='{{item.photoPath}}.jpg'></image>
+      <image class='goods-picture' src='{{item.photoPath}}.jpg' mode='aspectFit'></image>
     </view>
 
     <image class='heart-in' src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Type/%E5%BF%83%E6%84%8F.jpg?sign=6001e41e3e14cb5cd017259781812a33&t=1558360262' id='hash2'></image>
     <view class='goods-item' wx:for='{{merchandise}}' wx:if='{{item.type == "heart"}}' data-id='{{item.cid}}' bindtap='goToSubpage'>
-      <image class='goods-picture' src='{{item.photoPath}}.jpg'></image>
+      <image class='goods-picture' src='{{item.photoPath}}.jpg' mode='aspectFit'></image>
     </view>
 
     <image class='poem-in' src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Type/%E8%AF%97%E5%8F%A5.jpg?sign=4d39f58610ad625fd3dd25b3db08eb71&t=1558360292' id='hash3'></image>
     <view class='goods-item' wx:for='{{merchandise}}' wx:if='{{item.type == "poem"}}' data-id='{{item.cid}}' bindtap='goToSubpage'>
-      <image class='goods-picture' src='{{item.photoPath}}.jpg'></image>
+      <image class='goods-picture' src='{{item.photoPath}}.jpg' mode='aspectFit'></image>
     </view>
 
     <image class='humor-in' src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Type/%E5%B9%BD%E9%BB%98.jpg?sign=296897429e83b3c084c60a07a3bf030e&t=1558360284' id='hash4'></image>
     <view class='goods-item' wx:for='{{merchandise}}' wx:if='{{item.type == "humor"}}' data-id='{{item.cid}}' bindtap='goToSubpage'>
-      <image class='goods-picture' src='{{item.photoPath}}.jpg'></image>
+      <image class='goods-picture' src='{{item.photoPath}}.jpg' mode='aspectFit'></image>
     </view>
 
     <image class='other-in' src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Type/%E5%85%B6%E4%BB%96.jpg?sign=e6f8a1c68d9e6059ea4261ba0729874c&t=1558360305' id='hash5'></image>
     <view class='goods-item' wx:for='{{merchandise}}' wx:if='{{item.type == "other"}}' data-id='{{item.cid}}' bindtap='goToSubpage'>
-      <image class='goods-picture' src='{{item.photoPath}}.jpg'></image>
+      <image class='goods-picture' src='{{item.photoPath}}.jpg' mode='aspectFit'></image>
     </view>
 
   </view>

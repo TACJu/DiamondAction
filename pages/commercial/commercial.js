@@ -115,7 +115,7 @@ Page({
     var query = ''
     if (this.data.searchValue == '')
     {
-      query = '北京大学高富帅向东伟'
+      query = '一句誓言，一颗永恒'
     }
     else
     {

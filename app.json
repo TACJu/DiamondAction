@@ -24,12 +24,12 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Diamond Action",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "一言一钻",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "backgroundColor": "#5b5b5b",
+    "backgroundColor": "#303030",
     "color": "#B3B3B3",
     "selectedColor": "#ffffff",
     "list": [

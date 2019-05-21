@@ -18,7 +18,7 @@
                       
   </view>
   <view class="address-manage">
-      <text>💎细节 {{description}}</text>
+      <view>💎细节 {{description}}</view>
                       
   </view>
   <view class="address-manage">

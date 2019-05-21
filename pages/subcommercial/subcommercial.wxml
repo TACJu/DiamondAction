@@ -1,6 +1,7 @@
 <view class='commercial-wrapper'>
 <image class='commercial-bg' src='{{merchandise.photoPath}}'></image>
 </view>
+<button class='shop' disabled='{{banable}}'bindtap='goToBuy'>购买</button>
 <view class='goods-name'>钻石名称：{{merchandise.content}}</view>
 <view class='goods-price'>钻石价格：{{price}}元</view>
 <view class='goods-number'>钻石编号：{{tmpcnt}}</view>
@@ -8,4 +9,4 @@
 <view class='price-line'>价格曲线：</view>
 <canvas class="canvas" canvas-id="lineGraph{{item.id}}" disable-scroll="true" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler">
 </canvas>
-<button class='shop' disabled='{{banable}}' type='default' bindtap='goToBuy'>购买</button>
+<!-- <button class='shop' disabled='{{banable}}' type='default' bindtap='goToBuy'>购买</button> -->

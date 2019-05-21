@@ -2,7 +2,7 @@
   <image class='activity-picture' src='https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Activity/liulangdiqiu.jpg?sign=2459c6c8eb6d083ed13472ba214c4c3b&t=1556522482'></image>
   <view class='goods-list'>
     <view class='goods-item' wx:if='{{item.activity == "liulangdiqiu"}}' wx:for='{{merchandise}}' data-id='{{item.cid}}' bindtap='goToSubpage'>
-      <image class='goods-picture' src='{{item.photoPath}}.jpg'></image>
+      <image class='goods-picture' src='{{item.photoPath}}.jpg' mode='aspectFit'></image>
     </view>
   </view>
 </view>

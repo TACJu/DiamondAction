@@ -1,3 +1,7 @@
+Page{
+  background-color: whitesmoke;
+}
+
 .commercial-wrapper
 {
   position: relative;
@@ -58,7 +62,7 @@
 .canvas 
 {
   width: 100%;
-  height: 500rpx;
+  height: 450rpx;
   align-content: center;
   display: flex;
   justify-content: center;
@@ -66,6 +70,9 @@
 
 .shop
 {
+  background-color: rgb(238, 203, 129);
+  color: white;
+  font-weight: bold;
   position: relative;
   width: 100%;
 }
