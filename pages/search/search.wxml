@@ -18,7 +18,7 @@
 
   <view class='goods-list'>
     <view class='goods-item' wx:for='{{merchandise}}' data-id='{{item.cid}}' bindtap='goToSubpage'>
-      <image class='goods-picture' src='{{item.photoPath}}.jpg'></image>
+      <image class='goods-picture' src='{{item.photoPath}}.jpg' mode='aspectFit'></image>
     </view>
   </view>
 

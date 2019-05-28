@@ -5,6 +5,7 @@
       <view class='get-userinfo'>非敏感信息，仅用于小程序正常使用</view>
     </button>
   </block>
+  <view class='sell-num'>钻石销售总量 {{sellnum}}</view>
   <view class='search-content'>
     <view class="search-box">
       <view class="search">

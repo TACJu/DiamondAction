@@ -21,6 +21,14 @@ page{
   color: lightgray;
 }
 
+.sell-num
+{
+  display: flex;
+  justify-content: center;
+  color: lightgray;
+  background-color: black
+}
+
 .search-content {
   padding-top: 10rpx;
   display: flex;
