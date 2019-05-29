@@ -22,4 +22,5 @@
   <view class="address-manage">
       <view>💎获取时间 {{time}}</view>             
   </view>
+  <view class="address-manage"  bindtap='goToBuy' >💎去商城买同款</view>
 </view>

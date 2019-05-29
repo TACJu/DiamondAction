@@ -46,6 +46,12 @@ Page({
   onPullDownRefresh: function () {
 
   },
+  goToBuy(event) {
+    let id = this.data.classid
+    wx.navigateTo({
+      url: '/pages/subcommercial/subcommercial?id=' + id,
+    })
+  },
 
   /**
    * 获取商品信息，callback用于指定是否调用wx.stopPullDownRefresh()

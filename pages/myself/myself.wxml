@@ -24,7 +24,7 @@
 
     <view class="address-box">
         <view class="address-manage">
-            <navigator url="/pages/myDiamondList/myDiamondList" hover-class="none">挖钻收入💰</navigator>
+            <navigator url="/pages/income/income" hover-class="none">挖钻收入💰</navigator>
         </view>
     <view style="height:1000rpx;background: #eee;width:100%;"></view>
     </view>

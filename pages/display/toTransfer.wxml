@@ -25,4 +25,11 @@
   <button class="address-manage" bindtap='goToTransfer' >接受转赠🎁</button>
   <!-- <navigator  url="/pages/commercial/commercial" hover-class="none">商城寻宝</navigator>  -->
 
+       <view class="address-box">
+        <view class="address-manage">
+               <navigator url="/pages/commercial/commercial" open-type="switchTab"  hover-class="none">去商城逛钻寻宝💰</navigator>
+        </view>
+    <view style="height:1000rpx;background: #eee;width:100%;"></view>
+    </view>
+
 </view>
