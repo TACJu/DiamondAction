@@ -89,9 +89,9 @@ Page({
     wx.request({
       url: 'https://diamondaction.internetapi.cn:8443/SCIDE/SCManager',
       data: {
-        "action": "returnRevenue",
+        "action": "executeContract",
         "contractID": "DiamondOperation",
-        "operation": "myDiamonds",
+        "operation": "returnRevenue",
         "arg": "{\"user\": \"" + app.globalData.openId + "\"}",
         "privKey": privKey
       },
