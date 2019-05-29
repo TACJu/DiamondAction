@@ -7,8 +7,9 @@ Page({
    * Page initial data
    */
   data: {
-    myDiamond: [],
-    diamondNum: 0
+    revenue: 0,
+    already: 0,
+    remain:0
 
   },
   goToBuy(event) {
@@ -103,12 +104,14 @@ Page({
       dataType: "jsonp",
       success: function (res) {
         if (res.data) {
+          
           // _this.setData({
           //   myDiamond: JSON.parse(JSON.parse(JSON.parse(res.data).data).result),
           //   diamondNum: JSON.parse(JSON.parse(JSON.parse(res.data).data).result).length
           // })
           console.log("hello hello")
-          console.log(res.data)
+          console.log(JSON.parse(JSON.parse(JSON.parse(res.data).data).result))
+          console.log((JSON.parse(JSON.parse(JSON.parse(res.data).data).result)).remain)
           //JSON.parse
 
 
