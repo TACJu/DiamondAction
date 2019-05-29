@@ -8,7 +8,14 @@
              <text>💎 hello</text>
             
         </view>
-    </view>
+  </view>
+  <view class="address-box">
+         <view class="address-manage">
+               <navigator url="/pages/commercial/commercial" open-type="switchTab"  hover-class="none">💎去搜索挖钻</navigator>
+        </view>
+        
+             </view>
+    
 
   <!-- <view class='myDiamondList'>
 

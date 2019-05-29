@@ -11,6 +11,11 @@ Page({
     diamondNum: 0
 
   },
+  goToBuy(event) {
+    wx.navigateTo({
+      url: '/pages/commercial/commercial',
+    })
+  },
   goToSubpage(event) {
     let classid = event.currentTarget.dataset.diamondinfo.classId
     let innerid = event.currentTarget.dataset.diamondinfo.innerId
