@@ -5,7 +5,14 @@
 
  <view class="address-box">
         <view class="address-manage">
-             <text>💎 hello</text>
+             <text>挖钻总收益：¥ {{revenue}}</text>
+            
+            
+        </view>
+  </view>
+ <view class="address-box">
+        <view class="address-manage">
+             <text>待提现金额：¥ {{remain}}</text>
             
         </view>
   </view>
@@ -15,6 +22,30 @@
         </view>
         
              </view>
+
+<button class="address-box"   bindtap='cashout'> 去提现  </button>
+   
+
+
+
+ <view class="address-box">
+        <view class="address-manage">
+             <text>挖钻收益细节统计</text>
+             
+            
+        </view>
+  </view>
+
+
+
+   <view class="address-box"   wx:for='{{mine}}' data-diamondinfo='{{item}}'>
+        <view class="address-manage"   > 
+             <text>{{item}}</text>
+             <!-- <text>{{app.globalData.goodsInfo[item-1].revenue}}</text> -->
+             
+            
+        </view>
+  </view>
     
 
   <!-- <view class='myDiamondList'>
