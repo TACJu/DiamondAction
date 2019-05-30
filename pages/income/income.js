@@ -3,6 +3,7 @@ var myurl
 var i
 var temp
 var mine
+var revenueDetail
 
 Page({
 
@@ -114,17 +115,18 @@ Page({
           
           _this.setData({
             mine: JSON.parse(JSON.parse(JSON.parse(res.data).data).result).mine,
-            remain: JSON.parse(JSON.parse(JSON.parse(res.data).data).result).remain,
-            revenue: 0.5*JSON.parse(JSON.parse(JSON.parse(res.data).data).result).revenue
+            remain: (JSON.parse(JSON.parse(JSON.parse(res.data).data).result).remain).toFixed(2),
+            revenue: (0.5 * JSON.parse(JSON.parse(JSON.parse(res.data).data).result).revenue).toFixed(2)
             
           })
           mine=_this.data.mine
+          revenueDetail = JSON.parse(JSON.parse(JSON.parse(res.data).data).result).revenueDetail
           for (i = 0; i < mine.length; i++) {
             temp = mine[i]-1
             // mine[i] = '钻石“'
             mine[i] = app.globalData.goodsInfo[temp].content
             mine[i] += ' :¥ '
-            mine[i] += app.globalData.goodsInfo[temp].revenue
+            mine[i] += (revenueDetail[temp].revenue*0.5).toFixed(2)
             
           }
           //  _this.data.mine=mine
@@ -140,7 +142,7 @@ Page({
 
 
 
-          console.log(mine[0])
+          console.log(revenueDetail)
           //console.log(diamondNum)
 
 
