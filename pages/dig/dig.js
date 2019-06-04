@@ -51,6 +51,7 @@ Page({
 
   goToDig() {
     var _this = this
+    var time = util.formatTime(new Date())
     if (_this.data.items[0].checked == true || _this.data.mined == true)
     {
       _this.setData({
@@ -87,6 +88,34 @@ Page({
               title: '成功，请耐心等待审核',
               icon: 'none',
               duration: 2000
+            })
+            wx.request({
+              url:'https://diamondaction.internetapi.cn:8443/SCIDE/SCManager',
+              data: {
+                "action": "executeContract",
+                "contractID": "DiamondOperation",
+                "operation": "publish",
+                "arg": "{\"num\":" + 100 + ", \"content\":\"" + encodeURIComponent(_this.data.query) + "\", \"type\":\"" + "other" + "\", \"miner\":\"" + app.globalData.openId + "\", \"activity\":\"" + "none" + "\", \"priceType\":\"" + "linear" + "\", \"beginPrice\":" + 0.99 + ", \"priceParam\":" + 1 + ", \"photoPath\":\"" + "https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Icon/hello.jpg?sign=962697fdbf63636aad12c2ced450b9db&t=1558368470" + "\",\"photoPathAfter\":\"" + "https://6d61-master-27262a-1259058618.tcb.qcloud.la/images/Icon/hello.jpg?sign=962697fdbf63636aad12c2ced450b9db&t=1558368470" + "\",\"description\":\"" + encodeURIComponent(app.globalData.userInfo.nickName + "于2019年6月4日软工课上挖出了这颗钻石") + "\"}",
+                "privKey": privKey
+              },
+              dataType: "jsonp",
+              success: function (res) {
+                if (res.data) {
+                  wx.request({
+                    url: 'https://diamondaction.internetapi.cn:8443/SCIDE/SCManager',
+                    data: {
+                      "action": "executeContract",
+                      "contractID": "DiamondOperation",
+                      "operation": "buy",
+                      "arg": "{\"cid\":" + JSON.parse((JSON.parse(JSON.parse(res.data).data)).result) + ", \"buyer\":\"" + app.globalData.openId + "\", \"price\":" + 0.99 + ", \"time\":\"" + time + "\"}",
+                      "privKey": privKey
+                    },
+                    dataType: "jsonp",
+                    success: function (res) {
+                    }
+                  })
+                }
+              }
             })
           }
         }

@@ -205,7 +205,7 @@ Page({
             wx.showToast({
               title: "微信已到账",
             })
-            _this.onLoad()
+            _this.onShow()
           }
         }
       })
