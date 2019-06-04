@@ -31,7 +31,5 @@
     </view> -->
         <button class="address-manage" open-type ="share" data-action='1' data-content='{{content}}' >点击分享❤️</button>
         <button class="address-manage" open-type ="share" data-action='2' data-content='{{content}}' >点击转赠🎁</button>
-        <view class="address-manage"  bindtap='goToTransfer' >ceshi 点击转赠🎁</view>
-        <view class="address-manage"  bindtap='goToDisplay' >ceshi 点击分享🎁</view>
-    
+  
 </view>
