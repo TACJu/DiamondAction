@@ -114,7 +114,7 @@ Page({
       dataType: "jsonp",
       success: function (res) {
         if (res.data) {
-          
+          console.log(res.data)
           _this.setData({
             mine: JSON.parse(JSON.parse(JSON.parse(res.data).data).result).mine,
             remain: (JSON.parse(JSON.parse(JSON.parse(res.data).data).result).remain).toFixed(2),
@@ -125,13 +125,13 @@ Page({
           revenueDetail = JSON.parse(JSON.parse(JSON.parse(res.data).data).result).revenueDetail
           for (i = 0; i < mine.length; i++) {
             temp = mine[i]-1
+            console.log(temp)
             // mine[i] = '钻石“'
             context = app.globalData.goodsInfo[temp].content
             context += '\n¥ '
-            context += (revenueDetail[temp].revenue*0.5).toFixed(2)
+            context += (revenueDetail[i].revenue*0.5).toFixed(2)
             flag = ((parseFloat(context.substr(context.length - 4, 4))) == 0)
             _mine.push([context, flag])
-            console.log(_mine)
           }
           //  _this.data.mine=mine
           _this.setData({
