@@ -102,7 +102,6 @@ Page({
         })
       },
     })
-    this.getData()
   },
 
   /**
@@ -179,6 +178,7 @@ Page({
   },
 
   onShow: function () {
+    this.getData()
     this.startInterval()
   },
 

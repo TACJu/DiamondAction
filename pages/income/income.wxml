@@ -38,9 +38,9 @@
 
 
 
-   <view class="address-box"   wx:for='{{mine}}' data-diamondinfo='{{item}}'>
+   <view class="address-box" wx:if='{{item[1] == false}}' wx:for='{{mine}}' data-diamondinfo='{{item}}'>
         <view class="address-manage"   > 
-             <text>{{item}}</text>
+             <text>{{item[0]}}</text>
              <!-- <text>{{app.globalData.goodsInfo[item-1].revenue}}</text> -->
              
             
