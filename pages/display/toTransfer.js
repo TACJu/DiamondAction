@@ -75,13 +75,24 @@ Page({
       dataType: "jsonp",
       success: function (res) {
         if (res.data) {
-          wx.showToast({
-            title: '转赠成功',
-            icon: 'success',
-            duration: 2000
-          })
+          if (JSON.parse(JSON.parse(res.data).data).result.match("success")){
+            wx.showToast({
+              title: '转赠成功',
+              icon: 'success',
+              duration: 2000
+            })
+          }
+          else{
+            wx.showToast({
+              title: '该钻石已被领取',
+              icon: 'none',
+              duration: 2000
+            })
+          }
         }
-        //_this.onLoad(_this.data.options)
+        // console.log(JSON.parse(res.data).data)
+        console.log(JSON.parse(JSON.parse(res.data).data).result)
+
       }
     })
   },
