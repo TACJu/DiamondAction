@@ -1,14 +1,12 @@
 <view style="height:10rpx;background: #eee;width:100%;"></view>
-<view class="diamonds-item">
-
-    <view class="list-title">
-      <view>{{content}}</view>
-      <view class="right">¥ {{price}}</view>  
-    </view>
-
-</view>   
   
 <view class="address-box">
+  <view class="address-manage">
+      <view>💎钻石内容: {{content}}</view>           
+  </view>
+  <view class="address-manage">
+      <view>💎成交价格: ¥{{price}}</view>           
+  </view>
   <view class="address-manage">
       <view>💎拥有者: {{nickname}}</view>           
   </view>

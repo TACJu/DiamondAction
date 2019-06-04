@@ -1,14 +1,12 @@
 <view style="height:10rpx;background: #eee;width:100%;"></view>
-<view class="diamonds-item">
 
-    <view class="list-title">
-      <view>{{content}}</view>
-      <view class="right">¥ {{price}}</view>  
-    </view>
-
-</view>   
-  
 <view class="address-box">
+  <view class="address-manage">
+      <view>💎钻石内容: {{content}}</view>           
+  </view>
+  <view class="address-manage">
+      <view>💎成交价格: ¥{{price}}</view>           
+  </view>
   <view class="address-manage">
       <view>💎拥有者: {{nickname}}</view>           
   </view>
@@ -16,11 +14,11 @@
       <view>💎钻链全局ID: {{classid}}-{{innerid}}</view>           
   </view>
   <view class="address-manage">
-      <view>💎钻石信息： {{description}}</view>
+      <view>💎钻石信息: {{description}}</view>
                       
   </view>
   <view class="address-manage">
-      <view>💎获取时间 {{time}}</view>             
+      <view>💎获取时间: {{time}}</view>             
   </view>
   <button class="address-manage" bindtap='goToTransfer' >接受转赠🎁</button>
   <!-- <navigator  url="/pages/commercial/commercial" hover-class="none">商城寻宝</navigator>  -->
