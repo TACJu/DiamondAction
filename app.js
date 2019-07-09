@@ -1,132 +1,14 @@
 var openid
 
 //app.js
-/*
-App({
-  onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-    
-    // 登录
-    wx.login({
-      success(res) {// 发送 res.code 到后台换取 openId, sessionKey, unionId
-        if (res.code) {
-          // 发起网络请求
-          wx.request({
-            //url: 'https://api.weixin.qq.com/sns/jscode2session',
-            //url:'https://test.com/onLogin',
-            url:'https://api.weixin.qq.com/cgi-bin/getcallbackip?access_token=ACCESS_TOKEN',
-            data: {
-              code: res.code
-            },
-            success: function (res) {
-              console.log(res.data)
-              console.log("code\n")
-              console.log(res.code)
-
-            }
-          })
-          
-        } else {
-          console.log('登录失败！' + res.errMsg)
-        }
-      }
-    })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-              console.log("user info\n")
-              console.log(res.userInfo)
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }
-      }
-    })
-  },
-  globalData: {
-    userInfo: null
-  }
-})
-*/
-//app.js
-/*
-App({
-  onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    //调用微信登录接口
-    wx.login({
-      success: function (loginCode) {
-        var appid = 'wx384857c12aae75d3'; //填写微信小程序appid
-        var secret = 'c72cba8310f7acbad3828e9d759ae77b'; //填写微信小程序secret
-
-        //调用request请求api转换登录凭证
-        wx.request({
-          url: 'https://api.weixin.qq.com/sns/jscode2session?appid=‘+<code></code>appid+’&secret=‘+secret+’&grant_type=authorization_code&js_code=' + loginCode.code,
-          header: {
-            'content-type': 'application/json'
-          },
-          success: function (res) {
-            console.log(res.data.openid) //获取openid
-          }
-        })
-      }
-    })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-              console.log("user info\n")
-              console.log(res.userInfo)
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }
-      }
-    })
-  },
-  globalData: {
-    userInfo: null
-  }
-})
-*/
-
-
-//app.js
 App({
   globalData: {
     userInfo: null,
     userId: null,
     goodsInfo: [],
-    openId: ""
+    openId: "",
+  privKey:"YjgzNTg5MTI5ZjljMDAwZjk4NzAwMDQ3MTE0MjUzZGUxMTUyNGFlYTJjNmIwMzhiZmI3ZjAwNjQ2YTc2MzYwM2I2YjlhNmU3MTM3NmFlYzk1MTkyMTE4NmY4YzA1NzllYzM3MmM1Y2Q4ZjExY2Y2MTVjMDk3OTliM2MwN2Y3OTNjNTVlZThjZmU2OWFlZDQ0ZDYzYjczOWMzM2I3NGM2YjcyOWVjNTYwYTJkZmEwNzhkYmRlMzljNTQxNzE1ZWM0NTgyYTc5OGQ5ZmZlZTMxYzNkOWYwNzY3YTVlNzNhMDRhODYxNzFiYTNlZDRmNjczYmVjNzZhZGJjOGM1ZTRjZTNlMjMwYzgyNWQzN2JkNWM5YjM0Yzk2NjY2MTY3NTYxMmM0ZmY1YWJlMDJkYTg5NzVkNDBmMDZkMWE5YjM1ODhkYWFiNDhjNTdiMzJiMGZjZjhiNDdjYjIwMzQ1YzIzMDA3YzRiNWI2MDQwYTY1ZDY3MWJhZGIxMTg4YzVmOTkxN2I2ZGRiMWM5MzcxNWFmMzI2ZTA2YzkyMjI5NzBkYzZkMzhjYTM4NDU2OWFhYzljYmQ0OTIzNWEyOTdkOWYwMjBmNzA0MmY2NjA1OGFjYmRkNTFiYTQwNTVhMjE3YTk5OTMwZTk0NTk3MjVhYjNiOGM5NzhlMzg3MDAxYWVjYjcsMTAwMDEsNmRjMWYwNDc3OTc0OTExMGI5Y2E1YTRmZmRmN2EwNTMxYmNkMDViODFiZjkzMzY2Y2ZkNjJmNWNhNTk2ODNiZTk4YmM2YmI3MTk4MGM4Y2E0OTYxMTgzMjZjYmFlNjNhNDFjODdjMTU2YmRlYjdjYjExZjRjZjUxNzA2NjZhZGNkMDY4Mjk5ZGRlOTA4NzM5NTFkMGEwYTRmY2E3ODVkMDJiYmU3MDZhOTEwMTVmZjM0MzQ2NThmM2IwNzdhNTc4YTVmM2MwZjM2MmQ2OTM2OWJiNDlhYjM2ZDVjMjNkNmU5MzA5NjRhMzBkNTcwNGY1OTg0MWU3ZThjNmViMmFkNWI4ZGI4ZGNkOTk1Y2IwYjU0NDQ5NjUxMDY2YjczNDAxMzdhMGJiMmEzN2M1MmExYjkwYjk2NWEzODY0OGIxNmFjNDlkZGM4OTMzNWUwY2E1NmU5NWMxMjU0NDI2MjQzMDU0OGIyNjBkODkxY2M3OTcxMGI1MjFmOTQwMTk3ODJjYmQ3ZjEyOGZkNTE2MDI4M2IxZDZhMWI0ZWMyMjNlYjQ0NTk2NTA1ZTgyZDEwN2Y4MDJkMDM0MGJhODEwZjE5YmNjOGQ4ZTk0NmUxODE3MDA3NzI5ODUxMzZiMWQ1ODZmMjhhM2NkOTVlMTFhZTRkZmIwYWJmODM3YmEwOGY5Njk="
+
   },
 
   onLaunch: function () {
@@ -142,7 +24,7 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         var that = this;
-        var privKey = "YmYyYjc3MWZmNzExMGFlMmE4NDhlYzVlN2YxYTZjNWQ0MDM4YjVhMTcyMmI4NWJhMjU1MWM2NTQ3Y2U4ZGYyNmFiNzdlZjQ1ZGU1ZjJiNGE2NWNkZjhmN2UyMzJiODg4OGYwMDBjYWZhMDkyOGU3ZWZhMWI4NDU5NDg3ZDQxMDk0ODIyNjk2ZGMyNzI2ODFiMmRiMTA3YzMxYzBlMDA2N2NkNDFjOWM3NDg1MGZlNjcyZDYxMzA0Y2M0MGQzNTJlNzMwMGU2YjJiMmJhZGY5OGJkZWEyZjEzNmI0YTc2MWE4NDE0NDBlMWViZGYwNGQyYWJhMzE5Y2RkNjEzOGM2ZmRiNDdlMDc5NzdmYTIxZDc5Y2ZiZDk0MGQxOWNlNjAzNjM1ZGQ2YmI4ZGVlZDkxZjk4NzE3YTI4NGVkMzQyMTA4Yzg2MjgwMmZiMTZiMTUyYjUwYjliNWU2NzM4YzhjMDYyMDJmZDI3NmUwOWI0MTFjMDc2NTBjZGI2ZGMxYWFkNDQ4MTg5N2IxMWY5MTU4MGI3NzY1OWIxYzczOWU4ZGQ2ZWNhNDViMGNkY2Q2MGRhZWI1OWNiNjM3NzEzOGNlMWY4YTA3NzI0NmIyMWJjNjIzYTNmNGMzYTg2OTNlMDE5NjA5YzUxYWI3YTdhYTdlZmRkYTAxY2Q4ZDdhMWM5ODksMTAwMDEsYjdhYzU0NDUzMzA1N2RkNmVkZTczYWFiNDQyNWE4MGUyNDYxMTgyOWE4ZGYyNjFhMDYzNzNlN2RmODkxNjlhZGU2YmI1MWZhNjg0MDNhMDBiZTM1OWFjYWQ3ZGFmMWFmY2FlZDNhNDMxN2RkMTdlOWU5ZjViYzQwNjg0NDY3ZDMzYTJhNGRlZjc2MGVhM2Y1ZDBmZGIxM2U4NWRhZjIwYWM5OGMzNzA5MzA3MzE5MmIxYWNmYjEyZjYwODI2YzIxNTdiZjdhZTgyMDhmMjliYmMwNjQ5YjljNjVjZTYyMTBmMWViZGZiNmYxMDAxMmNiMzJiYjdmNTQ2NDI1ZGUxYzA0NzQ2NzM2ZWU4MzhkYzU0YTc2ZTQ2ZWE1M2MyZTJkNGZmNWZmN2M1YWJiMWJmOGYzMTVlZjk5OGZkOGQ5YzMzMDFhYzhhYjk4MDMxMzgyMThjNGY3MDUyMWJmZDg4ZDk0OTcxMWEzYTc3OWIwZGYxNmRkZTI4Y2NlYWI5YWMwZmQyZjdkYWEwZDUzYzhjMThiZjk0NmEzNjljZjk2MmM1YzhmYzhlMWQ3MDU3OGU4N2Q2MDNlYzlhYjYwZTFiYTg1Nzg3Zjk5MzU2ZGEwMDVkZGVmNjQxMzU0Mjg2NGNiODhhMzE3OTI0YWZkMjNkZDdmOWYzYmQwYTgwNDMxNzE=";
+        var privKey = this.globalData.privKey;
         var code = res.code; //登录凭证
         console.log("code:  ");
         console.log(code);
