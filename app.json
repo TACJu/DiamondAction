@@ -1,8 +1,8 @@
 {
   "pages": [
-    
-    "pages/commercial/commercial",
     "pages/logbefore/logbefore",
+    "pages/commercial/commercial",
+    
     "pages/myself/myself",
     "pages/logs/logs",
     "pages/subcommercial/subcommercial",

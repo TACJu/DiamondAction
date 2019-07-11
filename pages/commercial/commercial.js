@@ -37,6 +37,7 @@ Page({
           dataType: "jsonp",
           success: function (res) {
             if (res.data) {
+              console.log(app.globalData.openId)
               console.log(JSON.parse((JSON.parse(JSON.parse(res.data).data)).result))
               _this.setData({
                 sellnum: JSON.parse((JSON.parse(JSON.parse(res.data).data)).result)
@@ -67,6 +68,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad() {
+    console.log(app.globalData.openId)
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -101,6 +103,77 @@ Page({
           systemInfo: res
         })
       },
+    })
+    // 登录
+    wx.login({
+      success: res => {
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        var that = app;
+        var privKey = app.globalData.privKey;
+        var code = res.code; //登录凭证
+        var openid="hello";
+        console.log("code:  ");
+        console.log(code);
+        if (code) {
+          //2、调用获取用户信息接口
+          wx.getUserInfo({
+            success: function (res) {
+              console.log("hello");
+              //3.请求自己的服务器，解密用户信息 获取unionId等加密信息
+              wx.request({
+                url: 'https://diamondaction.internetapi.cn:8443/SCIDE/SCManager', //自己的服务接口地址
+                //method: 'post',
+                data: {
+                  "action": "executeContract",
+                  "contractID": "DiamondOperation",
+                  "operation": "getOpenId",
+                  "arg": code,
+                  "privKey": privKey,
+                  //username: res.userInfo.nickName,
+                },
+                dataType: "jsonp",
+
+                success: function (data) {
+                  //4.解密成功后 获取自己服务器返回的结果
+                  console.log(data)
+
+
+                  var code = (JSON.parse(JSON.parse(JSON.parse(JSON.parse(data.data).data).result))).resposeCode
+                  //.resposeCode
+
+                  console.log(code)
+                  //console.log(((JSON.parse(JSON.parse(res.data).data)).data))
+                  if (code == 200) {
+                    openid = JSON.parse(JSON.parse(JSON.parse(JSON.parse(JSON.parse(data.data).data).result)).response).openid
+                    getApp().globalData.openId = openid
+                    console.log(that.globalData.openId)
+                    //that.globalData.userId = data.data.data
+                    //console.log(data.data.data)
+                    if (that.employIdCallback) {
+                      that.employIdCallback(data.data.data);
+                    }
+                  } else {
+
+                    console.log('登录失败')
+                  }
+                },
+                fail: function () {
+                  console.log('系统错误')
+                }
+              })
+            },
+            fail: function () {
+              console.log('获取用户信息失败')
+            }
+          })
+        } else {
+          console.log('获取用户登录态失败！' + r.errMsg)
+        }
+      },
+      fail: function () {
+        console.log('登陆失败')
+      }
+
     })
   },
 
