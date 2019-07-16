@@ -102,8 +102,9 @@ Page({
             myDiamond: JSON.parse(JSON.parse(JSON.parse(res.data).data).result),
             diamondNum: JSON.parse(JSON.parse(JSON.parse(res.data).data).result).length
           })
-          console.log("hello hello")
+          //console.log("hello hello")
           console.log(res.data)
+          //console.log(diamondNum)
           //JSON.parse
           
           

@@ -1,3 +1,4 @@
+//为了coding，设置的很大，实际请改成2000
 const app = getApp()
 var searchValue = ''
 
@@ -45,7 +46,7 @@ Page({
             }
           }
         })
-      }, 2000)
+      }, 20000000)//为了coding，设置的很大，实际请改成2000
   },
 
   searchValueInput: function (e) {
@@ -257,6 +258,7 @@ Page({
   },
 
   onHide: function () {
+    
     clearInterval(this.data.interval)
   },
 

@@ -44,7 +44,7 @@ Page({
             }
           }
         })
-      }, 2000)
+      }, 20000000)
   },
 
   searchValueInput: function (e) {

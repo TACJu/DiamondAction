@@ -1,9 +1,10 @@
 {
   "pages": [
+    
     "pages/logbefore/logbefore",
     "pages/commercial/commercial",
-    
     "pages/myself/myself",
+    "pages/my/index",
     "pages/logs/logs",
     "pages/subcommercial/subcommercial",
     "pages/history/history",
@@ -24,6 +25,7 @@
     "pages/display/display",
     "pages/display/toTransfer",
     "pages/income/income"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -39,15 +41,21 @@
       {
         "pagePath": "pages/commercial/commercial",
         "text": "首 页",
-        "iconPath": "/images/Icon/shop.png",
-        "selectedIconPath": "/images/Icon/shop.png"
+        "iconPath": "images/Icon/home-off.png",
+        "selectedIconPath": "images/Icon/home-on.png"
       },
       {
-        "pagePath": "pages/myself/myself",
+        "pagePath": "pages/my/index",
         "text": "我 的",
-        "iconPath": "/images/Icon/me.png",
-        "selectedIconPath": "/images/Icon/me.png"
-      }
+        "iconPath": "images/Icon/my-off.png",
+        "selectedIconPath": "images/Icon/my-on.png"
+      },
+          {
+            "pagePath": "pages/myself/myself",
+            "text": "旧 我 的",
+            "iconPath": "images/Icon/my-off.png",
+            "selectedIconPath": "images/Icon/my-on.png"
+          }
     ]
   },
   "sitemapLocation": "sitemap.json"

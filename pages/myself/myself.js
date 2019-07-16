@@ -19,7 +19,9 @@ Page({
   onShow: function () {
     this.setData({
       userInfo:app.globalData.userInfo
+
     })
+    console.log(userInfo);
   },
   
   onLoad: function () {
@@ -52,5 +54,6 @@ Page({
     })
     console.log(backdoorCnt);
     this.setData({bc:backdoorCnt+1});
+    console.log(userInfo);
   }
 })
